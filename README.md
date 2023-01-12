@@ -70,3 +70,17 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         1. Create folder app/blog
         2. Create django app inside the app folder
+
+
+#### 03.2 Register the blog app to config
+
+        modified:   README.md
+        modified:   app/blog/apps.py
+        modified:   config/settings.py
+
+        Activities:
+
+        1. In blog/apps.py, modified the app name to: name = 'app.blog'
+        2. Register the blog app to settings.py
+        3. Run the server to test it
+        4. Result: It worked
