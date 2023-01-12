@@ -215,3 +215,45 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         2. But page still static.
 
         NEXT: Making the page dynamic by building Django Model
+
+
+## 06. Django Models
+
+
+#### 06.1 Creating Post model
+
+        modified:   README.md
+        modified:   app/blog/admin.py
+        new file:   app/blog/migrations/0001_initial.py
+        modified:   app/blog/models.py
+
+        (venv3941) λ pip install pillow
+        (venv3941) λ python manage.py makemigrations
+        (venv3941) λ python manage.py migrate
+        (venv3941) λ python manage.py createsuperuser
+        Username (leave blank to use 'hp'): admin
+        Email address: admin@admin.com
+        Password: admin
+        Password (again): admin
+        The password is too similar to the username.
+        This password is too short. It must contain at least 8 characters.
+        This password is too common.
+        Bypass password validation and create user anyway? [y/N]: y
+        Superuser created successfully.        
+
+        Activities:
+
+        1. Create Post model
+        2. Install pillow
+        3. Run and apply migrations
+        4. Create superuser
+        5. Register Post model to admin
+        6. Run the server: (venv3941) λ python manage.py runserver
+        7. Testing: login admin: http://127.0.0.1:8000/admin/login/?next=/admin/
+        8. Result: great
+
+        NEXT: Creating and Rendering post to homepage
+
+
+
+
