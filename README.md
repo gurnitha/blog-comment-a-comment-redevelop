@@ -126,4 +126,16 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         NEXT: Add style to the home page
 
+
+#### 04.3 Configure static files
+
+        modified:   README.md
+        modified:   templates/app/blog/index.html
+
+        Activities:
+
+        1. Adding assets to config
         
+        NOTE: The page still look the same due to the assets did not load yet.
+
+        NEXT: Load the static files or assets
