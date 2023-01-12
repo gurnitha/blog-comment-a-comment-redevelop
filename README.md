@@ -47,3 +47,26 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         Activities:
 
         1. Create django project
+
+
+## 03. Create Django Application
+
+
+#### 03.1 Create django app called 'blog'
+
+        (venv3941) λ mkdir app\blog
+        (venv3941) λ django-admin startapp blog app\blog
+
+        modified:   README.md
+        new file:   app/blog/__init__.py
+        new file:   app/blog/admin.py
+        new file:   app/blog/apps.py
+        new file:   app/blog/migrations/__init__.py
+        new file:   app/blog/models.py
+        new file:   app/blog/tests.py
+        new file:   app/blog/views.py
+
+        Activities:
+
+        1. Create folder app/blog
+        2. Create django app inside the app folder
