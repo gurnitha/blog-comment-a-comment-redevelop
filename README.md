@@ -155,3 +155,25 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         1. It worked nicely. But we need to use django template inheritance
 
         NEXT: Use django template inheritance  
+
+
+## 05. Django Templates Inheritance
+
+
+#### 05.1 Create base template
+
+        modified:   README.md
+        modified:   templates/app/blog/index.html
+        new file:   templates/base.html
+
+        Activities:
+
+        1. Create base template
+        2. Extends base template in the index.html
+
+        NOTE:
+
+        1. It worked nicely.
+        2. It need further separation to use django DRY
+
+        NEXT: Use include and partials
