@@ -1,11 +1,12 @@
 <!-- templates/app/blog/index.html -->
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
     <link
       rel="stylesheet"
       href="https://unicons.iconscout.com/release/v2.1.6/css/unicons.css"
@@ -90,7 +91,7 @@
       <div class="container">
         <div class="grid-2">
           <div class="post-img">
-            <img src="images/post.png" alt="" />
+            <img src="{% static 'assets/images/post.png' %}" alt="" />
           </div>
           <div class="post-content">
             <div class="cetagory">
@@ -124,7 +125,7 @@
           <a href="#">
             <div class="card">
               <div class="post-img">
-                <img src="images/post.png" alt="" />
+                <img src="{% static 'assets/images/post.png' %}" alt="" />
                 <div class="tag">Tag name</div>
               </div>
               <div class="card-content">
@@ -134,7 +135,7 @@
                 </h3>
                 <div class="author">
                   <div class="profile-pic">
-                    <img src="images/author.svg" alt="" />
+                    <img src="{% static 'assets/images/author.svg' %}" alt="" />
                   </div>
                   <div class="details">
                     <p>Author name</p>
@@ -149,7 +150,7 @@
           <a href="#">
             <div class="card">
               <div class="post-img">
-                <img src="images/post.png" alt="" />
+                <img src="{% static 'assets/images/post.png' %}" alt="" />
                 <div class="tag">Tag name</div>
               </div>
               <div class="card-content">
@@ -159,7 +160,7 @@
                 </h3>
                 <div class="author">
                   <div class="profile-pic">
-                    <img src="images/author.svg" alt="" />
+                    <img src="{% static 'assets/images/author.svg' %}" alt="" />
                   </div>
                   <div class="details">
                     <p>Author name</p>
@@ -174,7 +175,7 @@
           <a href="#">
             <div class="card">
               <div class="post-img">
-                <img src="images/post.png" alt="" />
+                <img src="{% static 'assets/images/post.png' %}" alt="" />
                 <div class="tag">Tag name</div>
               </div>
               <div class="card-content">
@@ -184,7 +185,7 @@
                 </h3>
                 <div class="author">
                   <div class="profile-pic">
-                    <img src="images/author.svg" alt="" />
+                    <img src="{% static 'assets/images/author.svg' %}" alt="" />
                   </div>
                   <div class="details">
                     <p>Author name</p>
@@ -214,7 +215,7 @@
           <a href="#">
             <div class="card">
               <div class="post-img">
-                <img src="images/post.png" alt="" />
+                <img src="{% static 'assets/images/post.png' %}" alt="" />
                 <div class="tag">Tag name</div>
               </div>
               <div class="card-content">
@@ -224,7 +225,7 @@
                 </h3>
                 <div class="author">
                   <div class="profile-pic">
-                    <img src="images/author.svg" alt="" />
+                    <img src="{% static 'assets/images/author.svg' %}" alt="" />
                   </div>
                   <div class="details">
                     <p>Author name</p>
@@ -239,7 +240,7 @@
           <a href="#">
             <div class="card">
               <div class="post-img">
-                <img src="images/post.png" alt="" />
+                <img src="{% static 'assets/images/post.png' %}" alt="" />
                 <div class="tag">Tag name</div>
               </div>
               <div class="card-content">
@@ -249,7 +250,7 @@
                 </h3>
                 <div class="author">
                   <div class="profile-pic">
-                    <img src="images/author.svg" alt="" />
+                    <img src="{% static 'assets/images/author.svg' %}" alt="" />
                   </div>
                   <div class="details">
                     <p>Author name</p>
@@ -264,7 +265,7 @@
           <a href="#">
             <div class="card">
               <div class="post-img">
-                <img src="images/post.png" alt="" />
+                <img src="{% static 'assets/images/post.png' %}" alt="" />
                 <div class="tag">Tag name</div>
               </div>
               <div class="card-content">
@@ -274,7 +275,7 @@
                 </h3>
                 <div class="author">
                   <div class="profile-pic">
-                    <img src="images/author.svg" alt="" />
+                    <img src="{% static 'assets/images/author.svg' %}" alt="" />
                   </div>
                   <div class="details">
                     <p>Author name</p>
@@ -355,6 +356,6 @@
     </footer>
     <!--======================== footer ========================-->
 
-    <script src="url.js" id="url"></script>
+    <script src="{% static 'assets/js/url.js' %}" id="url"></script>
   </body>
 </html>

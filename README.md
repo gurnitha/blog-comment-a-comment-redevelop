@@ -139,3 +139,19 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         NOTE: The page still look the same due to the assets did not load yet.
 
         NEXT: Load the static files or assets
+
+
+#### 04.4 Configure static files
+
+        modified:   README.md
+        modified:   templates/app/blog/index.html
+
+        Activities:
+
+        1. Loading static files
+
+        NOTE:
+
+        1. It worked nicely. But we need to use django template inheritance
+
+        NEXT: Use django template inheritance  
