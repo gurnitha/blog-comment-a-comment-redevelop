@@ -177,3 +177,24 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         2. It need further separation to use django DRY
 
         NEXT: Use include and partials
+
+
+#### 05.2 Include and partials
+
+        modified:   README.md
+        modified:   templates/app/blog/index.html
+        modified:   templates/base.html
+        new file:   templates/partials/footer.html
+        new file:   templates/partials/header.html
+
+        Activities:
+
+        1. Create partials files
+        2. Include the files in base.html
+
+        NOTE:
+
+        1. It works nicely.
+        2. But the page title need to use django tags
+
+        NEXT: Use django tags for the page title
