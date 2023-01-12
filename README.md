@@ -198,3 +198,20 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         2. But the page title need to use django tags
 
         NEXT: Use django tags for the page title
+
+
+#### 05.3 Page title
+
+        modified:   templates/app/blog/index.html
+        modified:   templates/base.html
+
+        Activities:
+
+        1. Adding tags title to base and index files
+
+        NOTE:
+
+        1. It works nicely
+        2. But page still static.
+
+        NEXT: Making the page dynamic by building Django Model
