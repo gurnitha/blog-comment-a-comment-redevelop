@@ -84,3 +84,27 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         2. Register the blog app to settings.py
         3. Run the server to test it
         4. Result: It worked
+
+
+## 04. Django Urls, Views and Templates
+
+
+#### 04.1 Django hello world
+
+        modified:   README.md
+        new file:   app/blog/urls.py
+        modified:   app/blog/views.py
+        modified:   config/settings.py
+        modified:   config/urls.py
+        new file:   templates/app/blog/index.html
+
+        Activities:
+
+        1. Create urls in:app/blog/urls.py
+        2. Create home_page views
+        3. Include the blog urls in config/urls.py
+        4. Activate templates in settings.py
+        5. Create folders and index file:templates/app/blog/index.html
+        6. Add hellow world to index.html
+        7. Run the server, and open in the browser: http://127.0.0.1:8000/blog/
+        8. Result: Hellow World!
