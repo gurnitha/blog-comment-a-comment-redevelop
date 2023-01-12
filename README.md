@@ -108,3 +108,22 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         6. Add hellow world to index.html
         7. Run the server, and open in the browser: http://127.0.0.1:8000/blog/
         8. Result: Hellow World!
+
+
+#### 04.2 Create the homepage
+
+        modified:   README.md
+        modified:   templates/app/blog/index.html
+
+        Activities:
+
+        1. Adding html template to index.html
+        2. Refresh the browser
+
+        NOTE:
+
+        1. The page look ugly without styles
+
+        NEXT: Add style to the home page
+
+        
