@@ -381,3 +381,21 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         1. Adding logic to detail_page view to count and save each time of a view
 
         NEXT: Counting and recording the views 
+
+
+#### 08.3 Counting and recording the views 
+
+        modified:   README.md
+        modified:   templates/app/blog/detail.html
+        
+        Activities:
+
+        1. Render the view_count on detail_page like this:
+           {{ post.view_count }} view{{ post.view_count|pluralize }}
+        2. Tesing:
+           - refresh the page several times
+           - each page refresh was counted as + 1 view
+           - go to admin panel, make the view_count = 0
+        3. Result: it make singular and plural views
+
+        NEXT: User Comments
