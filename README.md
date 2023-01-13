@@ -255,5 +255,23 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         NEXT: Creating and Rendering post to homepage
 
 
+#### 06.2 Creating and rendering posts
+
+        modified:   README.md
+        modified:   app/blog/views.py
+        new file:   images/post.png
+        modified:   templates/app/blog/index.html
+
+        Activities:
+
+        1. Import Post model to view
+        2. Get all the instance of the posts and put them in the context
+        3. Render posts instance to the homepage
+        4. Testing: refresh the browser
+        5. Result: Image did not show up
+
+        NEXT: Configure the media files
+
+
 
 
