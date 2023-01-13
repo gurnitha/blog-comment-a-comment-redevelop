@@ -558,4 +558,16 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         NEXT: Allowing users to leave comments
 
-        
+
+#### 09.9 Building replies to comments - Part 3: Rendering form instance to allow users to reply comments
+
+        modified:   README.md
+        modified:   templates/app/blog/detail.html
+
+        Activities:
+
+        1. Rendering the form instance of the detail_page view
+        2. Testing: reply to a comment
+        3. Result: It worked, but it did not show the reply.
+
+        NEXT: Rendering replies
