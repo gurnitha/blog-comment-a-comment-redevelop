@@ -338,3 +338,17 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         3. Register Tag model to admin
 
         NEXT: Creating and rendering tags to post
+
+
+#### 08.2 Creating and rendering tags to post
+
+        modified:   README.md
+        modified:   templates/app/blog/detail.html
+
+        Activities:
+
+        1. Render the tag to post detail page
+        2. Testing: refresh the browser
+        3. Result: tags rendered
+
+        NEXT: Counting and Recording Views 
