@@ -255,7 +255,9 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         NEXT: Creating and Rendering post to homepage
 
 
-#### 06.2 Creating and rendering posts
+## 07. Django Pages
+
+#### 07.2 Creating and rendering posts
 
         modified:   README.md
         modified:   app/blog/views.py
@@ -273,7 +275,7 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         NEXT: Configure the media files
 
 
-#### 06.3 Configuring media files
+#### 07.3 Configuring media files
 
         modified:   README.md
         modified:   config/settings.py
@@ -288,3 +290,8 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         4. Result: image showed up
 
         NEXT: Creating Detail Page
+
+
+#### 07.4 Modified readme file 
+
+        modified:   README.md
