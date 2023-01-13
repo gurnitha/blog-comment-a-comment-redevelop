@@ -634,7 +634,7 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 ## 11. Homepage
 
 
-#### 11.1 Displaying popular posts
+#### 11.1 Displaying popular posts on homepage
 
         modified:   app/blog/views.py
         modified:   templates/app/blog/index.html
@@ -653,4 +653,15 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
            <div class="tag">{{post.tags.all.0.name|capfirst}}</div>
 
         NEXT: Rendering 3 newest posts
+
+
+#### 11.2 Displaying most recent posts on homepage
+
+        modified:   README.md
+        modified:   app/blog/views.py
+        modified:   templates/app/blog/index.html
+
+        NOTE: Almost the same as 11.1
+
+        NEXT: Making users to subscribe
 

@@ -15,10 +15,13 @@ def home_page(request):
     posts = Post.objects.all()
     # Get 3 most viewed post
     top_posts = Post.objects.all().order_by('-view_count')[0:3]
+    recent_posts = Post.objects.all().order_by('-last_updated')[0:3]
     print(top_posts)
+    print(recent_posts)
     context = {
         'posts':posts,
-        'top_posts':top_posts
+        'top_posts':top_posts,
+        'recent_posts':recent_posts,
     }
     return render(request, 'app/blog/index.html', context)
 
