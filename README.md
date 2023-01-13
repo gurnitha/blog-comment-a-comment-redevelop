@@ -577,3 +577,48 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         modified:   README.md
         modified:   templates/app/blog/detail.html
+
+
+## 10 Section Summary
+
+
+        Hello guys. Welcome to this class.
+        So in this lecture, we will be doing a section overview.
+        So far, we have made a really good progress with our blog application.
+        So in this section, we will be going a bit further
+        and we will be adding
+        more features into our blog application.
+
+        After completing this section,
+        you would have made a really good progresson your blog application.
+        So, here's what we are going to covers.
+
+        So we will be finishing the home page, the tags page
+        and the authors page.
+
+        So we still have some development that is to be done on the homepage.
+        Our application does not have a tags page and a dedicated
+        authors page, so we will be setting that up in this section.
+
+        What will we learn?
+        -------------------
+
+        1. We will be finishing the homepage, tags page, author page.
+        2. We will learn, how can you allow users to search on your website?
+
+                Search is a basic functionality in today's
+                modern web application. So if you're building any 
+                website that has lots of posts,
+                lots of products or anything,
+                it's mandatory that you should have search,
+                which will allow users to discover what they want.
+
+        3. And then, we will learn, how can you render HTML content in the post.
+                So right now,
+                our post consists of just text,
+                so you cannot have formatting like bold, italics and so on.
+                So, we will be learning, how can you render HTML content
+                to make your post well formatted.
+
+        So that's what we are going to cover and I'm excited to see you inside.
+        Thank you.
