@@ -319,3 +319,22 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         7. Result: it render the detail post page
 
         NEXT: Creating Tags
+
+
+## 08. Creating Tags
+
+
+#### 08.1 Creating Tag model
+
+        modified:   README.md
+        modified:   app/blog/admin.py
+        new file:   app/blog/migrations/0002_tag_post_tags.py
+        modified:   app/blog/models.py
+
+        Activities:
+
+        1. Creating Tag model
+        2. Run and apply migrations
+        3. Register Tag model to admin
+
+        NEXT: Creating and rendering tags to post
