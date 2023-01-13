@@ -368,4 +368,16 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         1. Adding view_count field in Post model
         2. Run and apply migrations
 
-        NEXT: Add view_count logic to detail_page viw
+        NEXT: Add view_count logic to detail_page view
+
+
+#### 08.2 Adding view_count logic to detail_page view
+
+        modified:   README.md
+        modified:   app/blog/views.py
+        
+        Activities:
+
+        1. Adding logic to detail_page view to count and save each time of a view
+
+        NEXT: Counting and recording the views 
