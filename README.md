@@ -543,3 +543,19 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         4. Result: It worked.
 
         NEXT: Allowing users to leave comments
+
+
+#### 09.8 Building replies to comments - Part 2: Configuring logic in detail_page view
+
+        modified:   README.md
+        modified:   app/blog/views.py
+
+        Activities:
+
+        1. Configure the logic in detail_page view to allow reply to comments.
+        2. Tesing: re run the server
+        3. Result: ok
+
+        NEXT: Allowing users to leave comments
+
+        
