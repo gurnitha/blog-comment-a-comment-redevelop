@@ -571,3 +571,9 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         3. Result: It worked, but it did not show the reply.
 
         NEXT: Rendering replies
+
+
+#### 09.10 Building replies to comments - Part 4: Rendering replies
+
+        modified:   README.md
+        modified:   templates/app/blog/detail.html
