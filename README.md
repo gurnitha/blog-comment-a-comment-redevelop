@@ -352,3 +352,20 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         3. Result: tags rendered
 
         NEXT: Counting and Recording Views 
+
+
+## 08. Counting and Recording Views 
+
+
+#### 08.1 Adding view_count field to Post model
+
+        modified:   README.md
+        new file:   app/blog/migrations/0003_post_view_count.py
+        modified:   app/blog/models.py
+
+        Activities:
+
+        1. Adding view_count field in Post model
+        2. Run and apply migrations
+
+        NEXT: Add view_count logic to detail_page viw
