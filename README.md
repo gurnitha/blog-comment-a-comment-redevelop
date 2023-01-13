@@ -273,5 +273,18 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         NEXT: Configure the media files
 
 
+#### 06.3 Configuring media files
 
+        modified:   README.md
+        modified:   config/settings.py
+        modified:   config/urls.py
+        new file:   upload/images/post.png
 
+        Activities:
+
+        1. Confituring media files path in config/settings.py and in  config/urls.py
+        2. Re-upload image in the admin panel for the posts
+        3. Testing: reload browser
+        4. Result: image showed up
+
+        NEXT: Creating Detail Page
