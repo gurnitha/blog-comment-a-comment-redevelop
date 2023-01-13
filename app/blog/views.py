@@ -42,6 +42,7 @@ def detail_page(request, slug):
 
     
     context = {
-            'post':post,
+        'post':post,
+        'form':form,
     }
     return render(request, 'app/blog/detail.html', context)

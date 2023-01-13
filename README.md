@@ -444,4 +444,39 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         1. Configuring comment logic in detail_page view
         2. Correnting import typos in form.py
 
-        NEXT: Rendering form to form in post datail page 
+        NEXT: Creating comments 
+
+
+#### 09.4 Creating comments
+
+        modified:   README.md
+        modified:   app/blog/migrations/0001_initial.py
+        deleted:    app/blog/migrations/0002_tag_post_tags.py
+        deleted:    app/blog/migrations/0003_post_view_count.py
+        deleted:    app/blog/migrations/0004_comments.py
+        modified:   app/blog/views.py
+        modified:   templates/app/blog/detail.html
+        new file:   upload/images/post_IwvPFq8.png
+
+        Activities:
+
+        1. Rendering form instance from the detail_page view to detail page
+        2. Testing: create a comment
+        3. Error found after submiting the form, it says: no such table: blog_comment
+
+        Solution to poin 3:
+
+        1. Remove all the migrations files
+        2. Delete db.sqlite3 db
+        3. Run and apply again migrations
+        4. Create superuser
+        5. Add post from the admin panel 
+        6. Add tag from the admin panel 
+        7. Open post and select tag in admin panel 
+
+        Resutl: 
+
+        1. Comments could save in db.
+        2. But comments does not appear in the post detail page.
+
+        NEXT: Rendering comments
