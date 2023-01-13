@@ -3,6 +3,7 @@
 # Import django modules
 from django.db import models
 from django.utils.text import slugify
+from django.contrib.auth.models import User
 
 # MODEL: Tag
 class Tag(models.Model):
@@ -28,3 +29,14 @@ class Post(models.Model):
     image = models.ImageField(null=True, blank=True, upload_to="images/")
     tags = models.ManyToManyField(Tag, blank=True, related_name='post_based_tag')
     view_count=models.IntegerField(null=True, blank=True)
+
+
+# MODEL: Comment
+class Comment(models.Model):
+    content = models.TextField()
+    date = models.DateTimeField(auto_now=True)
+    name = models.CharField(max_length=200)
+    email = models.EmailField(max_length=200)
+    website = models.CharField(max_length=200)
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)

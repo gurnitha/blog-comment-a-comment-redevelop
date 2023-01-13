@@ -4,8 +4,9 @@
 from django.contrib import admin
 
 # Import from locals
-from app.blog.models import Post, Tag
+from app.blog.models import Post, Tag, Comment
 
 
 admin.site.register(Post)
 admin.site.register(Tag)
+admin.site.register(Comment)

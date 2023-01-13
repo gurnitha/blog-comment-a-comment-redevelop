@@ -399,3 +399,23 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         3. Result: it make singular and plural views
 
         NEXT: User Comments
+
+
+
+## 09. User Comments
+
+
+#### 09.1 Creating Comment model
+
+        modified:   README.md
+        modified:   app/blog/admin.py
+        new file:   app/blog/migrations/0004_comments.py
+        modified:   app/blog/models.py
+        
+        Activities:
+
+        1. Creating Comment model
+        2. Run and apply migrations
+        3. Register Comment model to admin.py
+
+        NEXT: Creating CommentForm model
