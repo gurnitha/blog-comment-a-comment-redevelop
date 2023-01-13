@@ -4,12 +4,12 @@
 from django import forms
 
 # Import from locals
-from app.blog.models import Comments
+from app.blog.models import Comment
 
 class CommentForm(forms.ModelForm):
 	# Creating form field based on the Comment model fields
     class Meta:
-        model = Comments
+        model = Comment
         fields = {'content','email','name','website'}
     
     # Adding widgets to form input

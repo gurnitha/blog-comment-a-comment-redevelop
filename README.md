@@ -430,4 +430,18 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         1. Creating CommentForm model
 
-        NEXT: Configuring comment in the post_page view
+        NEXT: Configuring comment in the detail_page view
+
+
+#### 09.3 Configuring comment in the detail_page view
+
+        modified:   README.md
+        modified:   app/blog/forms.py
+        modified:   app/blog/views.py
+        
+        Activities:
+
+        1. Configuring comment logic in detail_page view
+        2. Correnting import typos in form.py
+
+        NEXT: Rendering form to form in post datail page 
