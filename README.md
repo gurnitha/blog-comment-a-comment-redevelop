@@ -419,3 +419,15 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         3. Register Comment model to admin.py
 
         NEXT: Creating CommentForm model
+
+
+#### 09.2 Creating CommentForm model
+
+        modified:   README.md
+        new file:   app/blog/forms.py
+        
+        Activities:
+
+        1. Creating CommentForm model
+
+        NEXT: Configuring comment in the post_page view
