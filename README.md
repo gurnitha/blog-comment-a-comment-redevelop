@@ -480,3 +480,27 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         2. But comments does not appear in the post detail page.
 
         NEXT: Rendering comments
+
+
+#### 09.5 Rendering comments
+
+        modified:   README.md
+        modified:   app/blog/views.py
+        modified:   templates/app/blog/detail.html
+
+        Activities:
+
+        1. Use the Comment model in detail_page view and get its instances
+        2. Render the comment instances to post detail page
+        3. Testing: creating new comment
+        4. Result:  comments rendered.
+
+        NOTE:
+
+        1. A new comment re-render when refresh the browser
+        2. Author image does not show up, because there is no author image in the Comment model.
+
+        NEXT: Fixing the issues
+
+        
+

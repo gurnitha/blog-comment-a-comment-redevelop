@@ -113,14 +113,15 @@
                     </div>
 
                     <!--====================== comments ======================-->
+                    {% for comment in comments %}
                     <div class="user-comment">
                       <div class="author">
                         <div class="profile-pic">
                           <img src="../images/author.svg" alt="" />
                         </div>
                         <div class="details">
-                          <p>Author name</p>
-                          <small>June 20, 2022</small>
+                          <p>{{comment.name}}</p>
+                          <small>{{comment.date|date}}</small>
                         </div>
                       </div>
                       <div class="comment-sec-main">
@@ -128,13 +129,11 @@
                         <!--======== comment and reply comment ========-->
                         <div class="comment-sec">
                           <div class="comment">
+                            
                             <p>
-                              Lorem ipsum dolor sit amet consectetur adipisicing
-                              elit. Tempora magnam minima harum, dignissimos
-                              ipsa vero sequi ipsam, distinctio quisquam quo
-                              cupiditate sed recusandae expedita quod iste
-                              maiores rerum. Eaque, dignissimos........
+                              {{comment.content}}
                             </p>
+                            
                           </div>
 
                           <!-- Reply a comment -->
@@ -187,6 +186,7 @@
 
                       </div>
                     </div>
+                    {% endfor %}
                     <!--==================== comments end ====================-->
 
                     <!--==================== user comment ====================-->
