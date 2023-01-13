@@ -257,7 +257,7 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
 ## 07. Django Pages
 
-#### 07.2 Creating and rendering posts
+#### 07.1 Creating and rendering posts
 
         modified:   README.md
         modified:   app/blog/views.py
@@ -275,7 +275,7 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         NEXT: Configure the media files
 
 
-#### 07.3 Configuring media files
+#### 07.2 Configuring media files
 
         modified:   README.md
         modified:   config/settings.py
@@ -292,6 +292,30 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         NEXT: Creating Detail Page
 
 
-#### 07.4 Modified readme file 
+#### 07.3 Modified readme file 
 
         modified:   README.md
+
+
+#### 07.4 Creating post detail page
+
+        modified:   README.md
+        modified:   app/blog/urls.py
+        modified:   app/blog/views.py
+        new file:   templates/app/blog/detail.html
+        modified:   templates/app/blog/index.html
+
+        Activities:
+
+        1. Creating url path for post detail
+        2. Creating detail_page view
+        3. Creating detail page
+        4. Render the post title on the page title
+        5. Add links
+        6. Testing: 
+           - go to home page
+           - refresh the browser
+           - hover and click the post
+        7. Result: it render the detail post page
+
+        NEXT: Creating Tags

@@ -14,3 +14,13 @@ def home_page(request):
 		'posts':posts,
 	}
 	return render(request, 'app/blog/index.html', context)
+
+
+# VIEWS: detail_page
+def detail_page(request, slug):
+    post = Post.objects.get(slug=slug)
+    print(post)
+    context = {
+            'post':post,
+    }
+    return render(request, 'app/blog/detail.html', context)
