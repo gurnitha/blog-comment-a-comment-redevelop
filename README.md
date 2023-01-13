@@ -6,6 +6,9 @@ Github link: https://github.com/gurnitha/blog-comment-a-comment-redevelop
 My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/lecture/
 
 
+## Building Real World Project: A Blog Application - Getting Started
+
+
 ## 01. Project Setup
 
 
@@ -622,3 +625,32 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         So that's what we are going to cover and I'm excited to see you inside.
         Thank you.
+
+
+
+## Building Real World Project: A Blog Application - Building More Features
+
+
+## 11. Homepage
+
+
+#### 11.1 Displaying popular posts
+
+        modified:   app/blog/views.py
+        modified:   templates/app/blog/index.html
+        new file:   upload/images/post-1.png
+        new file:   upload/images/post-3.png
+        new file:   upload/images/post-4.png
+
+        Activities:
+
+        1. Configure to load 3 most viewed post, like this
+           top_posts = Post.objects.all().order_by('-view_count')[0:3]
+        2. Render them to homepage.
+           
+           Note about rendering tag: 
+           <!-- post.tags.all()[0].name -->
+           <div class="tag">{{post.tags.all.0.name|capfirst}}</div>
+
+        NEXT: Rendering 3 newest posts
+

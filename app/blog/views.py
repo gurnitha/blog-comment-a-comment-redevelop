@@ -12,11 +12,15 @@ from app.blog.models import Comment
 
 # VIEWS: home_page
 def home_page(request):
-	posts = Post.objects.all()
-	context = {
-		'posts':posts,
-	}
-	return render(request, 'app/blog/index.html', context)
+    posts = Post.objects.all()
+    # Get 3 most viewed post
+    top_posts = Post.objects.all().order_by('-view_count')[0:3]
+    print(top_posts)
+    context = {
+        'posts':posts,
+        'top_posts':top_posts
+    }
+    return render(request, 'app/blog/index.html', context)
 
 
 # VIEWS: detail_page

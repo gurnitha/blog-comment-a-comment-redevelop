@@ -77,14 +77,14 @@
         <h1 class="sec-title">Top blogs</h1>
         <div class="grid-3">
 
-          	
-          {% for post in posts %}	
+          {% for post in top_posts %}	
           <!-- card -->
           <a href="{% url 'blog:detail' post.slug %}">
             <div class="card">
               <div class="post-img">
                 <img src="{{ post.image.url }}" alt="" />
-                <div class="tag">Tag name</div>
+                <!-- post.tags.all()[0].name -->
+                <div class="tag">{{post.tags.all.0.name|capfirst}}</div>
               </div>
               <div class="card-content">
                 <h3>
@@ -92,10 +92,10 @@
                 </h3>
                 <div class="author">
                   <div class="profile-pic">
-                    <img src="{% static 'assets/images/author.svg' %}" alt="" />
+                    <img src="{{ post.image.url }}" alt="" />
                   </div>
                   <div class="details">
-                    <p>Author name</p>
+                    <p>{{ post.autor }}</p>
                     <small>{{ post.date }}</small>
                   </div>
                 </div>
@@ -104,6 +104,7 @@
           </a>
           <!-- card end-->
           {% endfor %}
+
         </div>
         <center>
           <a href=""><button class="btn btn-primary rounded view">
