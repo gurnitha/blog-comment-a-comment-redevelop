@@ -2,6 +2,8 @@
 
 # Import django modules
 from django.shortcuts import render
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 
 # Import from locals
 from app.blog.models import Post 
@@ -35,6 +37,7 @@ def detail_page(request, slug):
             post = Post.objects.get(id = postid)
             comment.post = post
             comment.save()
+            return HttpResponseRedirect(reverse('blog:detail', kwargs={'slug':slug}))
 
 
     # Conting and recording the view

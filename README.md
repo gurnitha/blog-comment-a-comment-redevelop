@@ -502,5 +502,44 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         NEXT: Fixing the issues
 
-        
 
+#### 09.6 Fixing issue comment re-render and author image
+
+        modified:   README.md
+        modified:   app/blog/views.py
+
+        Activities:
+
+        1. In detail_page views, do these import django modules:
+           from django.http import HttpResponseRedirect
+           from django.urls import reverse 
+        2. In detail_page view, add this after the line comment.save():
+           return HttpResponseRedirect(reverse('blog:detail', kwargs={'slug':slug}))
+        3. Loading static image for the author's comment
+        4. Testing: submit a new comment
+        5. Result: the comment render correctly and not re-render again.
+
+        NOTE:
+
+        1. So far, we can comment a post or posts.
+        2. But we coult not yet been able to reply to a comment or commnents.
+
+        NEXT: Building replies
+
+
+#### 09.7 Building replies to comments - Part 1: Create parent field in Comment model
+
+        modified:   README.md
+        new file:   app/blog/migrations/0002_comment_parent.py
+        modified:   app/blog/models.py
+        modified:   app/blog/views.py
+        modified:   templates/app/blog/detail.html
+
+        Activities:
+
+        1. Create a new field in Comment model called parent which reference the Comment model itself.
+        2. Run and apply migrations.
+        3. Testing: added a comment from admin panel refering a post and comment as perent.
+        4. Result: It worked.
+
+        NEXT: Allowing users to leave comments
