@@ -37,17 +37,17 @@
               <div class="container">
                 <h1 class="sec-title">Top posts</h1>
                 <div class="grid-2 blog">
+                  {% for top_post in top_posts %}
                   <!-- card -->
                   <a href="#">
                     <div class="card">
                       <div class="post-img">
-                        <img src="{% static 'assets/images/post.png' %}" alt="" />
-                        <div class="tag">Tag name</div>
+                        <img src="{{top_post.image.url}}" alt="" />
+                        <div class="tag">{{top_post.tags.all.0.name|capfirst}}</div>
                       </div>
                       <div class="card-content">
                         <h3>
-                          A blog title and other stuffs will add here, also we
-                          can include.
+                          {{top_post.title}}
                         </h3>
                         <div class="author">
                           <div class="profile-pic">
@@ -55,38 +55,14 @@
                           </div>
                           <div class="details">
                             <p>Author name</p>
-                            <small>June 20, 2022</small>
+                            <small>{{top_post.last_updated|date}}</small>
                           </div>
                         </div>
                       </div>
                     </div>
                   </a>
                   <!-- card end-->
-                  <!-- card -->
-                  <a href="#">
-                    <div class="card">
-                      <div class="post-img">
-                        <img src="{% static 'assets/images/post.png' %}" alt="" />
-                        <div class="tag">Tag name</div>
-                      </div>
-                      <div class="card-content">
-                        <h3>
-                          A blog title and other stuffs will add here, also we
-                          can include.
-                        </h3>
-                        <div class="author">
-                          <div class="profile-pic">
-                            <img src="{% static 'assets/images/author.svg' %}" alt="" />
-                          </div>
-                          <div class="details">
-                            <p>Author name</p>
-                            <small>June 20, 2022</small>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                  <!-- card end-->
+                  {% endfor %}
                 </div>
               </div>
             </section>

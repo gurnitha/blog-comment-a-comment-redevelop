@@ -108,8 +108,12 @@ def tag_page(request, slug):
     # Get single tag instance
     tag = Tag.objects.get(slug=slug)
 
+    # Get 3 most viewed post by a spesific tag
+    top_posts = Post.objects.filter(tags__in=[tag.id]).order_by('-view_count')[0:2]
+
     context = {
         'tag':tag,
+        'top_posts':top_posts,
     }
     
     return render(request, 'app/blog/tag.html', context)

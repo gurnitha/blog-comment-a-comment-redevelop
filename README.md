@@ -686,3 +686,15 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         modified:   README.md
         modified:   app/blog/views.py (get a tag object)
         modified:   templates/app/blog/tag.html (reder it to tag page)
+
+#### 12.4 Tag - Part 4: Get 2 objects of the most viewed posts by a spesific tag
+
+        modified:   README.md
+        1. Add logic
+        modified:   app/blog/views.py
+
+        # Get 2 objects of the most viewed posts by a spesific tag
+        top_posts = Post.objects.filter(tags__in=[tag.id]).order_by('-view_count')[0:2]
+
+        2. Reder the object
+        modified:   templates/app/blog/tag.html
