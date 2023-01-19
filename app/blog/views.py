@@ -20,6 +20,12 @@ def home_page(request):
     recent_posts = Post.objects.all().order_by('-last_updated')[0:3]
     # print(recent_posts)
 
+    # Featured posts
+    featured_blog = Post.objects.filter(is_featured = True)
+    # In case there more than one freatured posts, render the first one
+    if featured_blog:
+        featured_blog = featured_blog[0]
+
     # Using SubscribeForm
     subscribe_form = SubscribeForm
     # If something wrong, render None
@@ -39,6 +45,7 @@ def home_page(request):
         'recent_posts':recent_posts,
         'subscribe_form':subscribe_form, 
         'subscribe_successful':subscribe_successful,
+        'featured_blog':featured_blog,
     }
 
     return render(request, 'app/blog/index.html', context)

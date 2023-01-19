@@ -657,3 +657,11 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         modified:   README.md
         modified:   app/blog/admin.py
+
+#### 11.7 Configuring and rendering featured posts
+
+        modified:   README.md
+        new file:   app/blog/migrations/0004_post_is_featured.py (run and apply migrations)
+        modified:   app/blog/models.py (add is_featured boolean field)
+        modified:   app/blog/views.py (add logic to get the featured post instance)
+        modified:   templates/app/blog/index.html (render the featured blog instances)
