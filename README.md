@@ -728,3 +728,18 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         modified:   README.md
         modified:   app/blog/views.py
         modified:   templates/app/blog/tag.html
+
+#### 12.8 Tag - Part 8: Showing posts by tag from tag's link in post detail
+
+        modified:   README.md
+        1. Modified blog path
+        modified:   config/urls.py (removed 'blog/')
+
+        2. Add post's link by tag
+        modified:   templates/app/blog/detail.html
+
+        {% for tag in post.tags.all %}
+                # It will show something like this:
+                # http://127.0.0.1:8000/tag/django
+                <a class="tag" href="{% url 'blog:tag_page' tag.slug %}">{{tag.name}}</a>
+        {% endfor %}

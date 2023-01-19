@@ -79,7 +79,7 @@
                       is the instance of the post in detail_page view.
                       This can be made due to Tag and Post M-TO-M relationship-->
                       {% for tag in post.tags.all %}
-                        <div class="tag">{{tag.name}}</div>
+                        <a class="tag" href="{% url 'blog:tag_page' tag.slug %}">{{tag.name}}</a>
                       {% endfor %}
                     </div>
                     <!-- end Tags under post -->

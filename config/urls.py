@@ -12,7 +12,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     
     # blog
-    path('blog/', include('app.blog.urls', namespace='blog')),
+    path('', include('app.blog.urls', namespace='blog')),
 
     # media files
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
