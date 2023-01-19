@@ -652,3 +652,8 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         modified:   README.md
         modified:   templates/app/blog/index.html (render subscribe_form instance)
+
+#### 11.6 Subscribe - Part 5: Configure Subscribe table display in admin panel
+
+        modified:   README.md
+        modified:   app/blog/admin.py
