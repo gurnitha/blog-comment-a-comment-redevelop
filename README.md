@@ -11,7 +11,6 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
 ## 01. Project Setup
 
-
 #### 01.1 Create virtual environment and install django 4.1
 
 
@@ -34,7 +33,6 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
 ## 02. Create Django Project
 
-
 #### 02.1 Create django project called 'config'
 
         (venv3941) λ django-admin startproject config .
@@ -53,7 +51,6 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
 
 ## 03. Create Django Application
-
 
 #### 03.1 Create django app called 'blog'
 
@@ -74,7 +71,6 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         1. Create folder app/blog
         2. Create django app inside the app folder
 
-
 #### 03.2 Register the blog app to config
 
         modified:   README.md
@@ -90,7 +86,6 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
 
 ## 04. Django Urls, Views and Templates
-
 
 #### 04.1 Django hello world
 
@@ -112,7 +107,6 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         7. Run the server, and open in the browser: http://127.0.0.1:8000/blog/
         8. Result: Hellow World!
 
-
 #### 04.2 Create the homepage
 
         modified:   README.md
@@ -129,7 +123,6 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         NEXT: Add style to the home page
 
-
 #### 04.3 Configure static files
 
         modified:   README.md
@@ -142,7 +135,6 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         NOTE: The page still look the same due to the assets did not load yet.
 
         NEXT: Load the static files or assets
-
 
 #### 04.4 Configure static files
 
@@ -162,7 +154,6 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
 ## 05. Django Templates Inheritance
 
-
 #### 05.1 Create base template
 
         modified:   README.md
@@ -180,7 +171,6 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         2. It need further separation to use django DRY
 
         NEXT: Use include and partials
-
 
 #### 05.2 Include and partials
 
@@ -202,7 +192,6 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         NEXT: Use django tags for the page title
 
-
 #### 05.3 Page title
 
         modified:   templates/app/blog/index.html
@@ -221,7 +210,6 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
 
 ## 06. Django Models
-
 
 #### 06.1 Creating Post model
 
@@ -277,7 +265,6 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         NEXT: Configure the media files
 
-
 #### 07.2 Configuring media files
 
         modified:   README.md
@@ -294,11 +281,9 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         NEXT: Creating Detail Page
 
-
 #### 07.3 Modified readme file 
 
         modified:   README.md
-
 
 #### 07.4 Creating post detail page
 
@@ -326,7 +311,6 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
 ## 08. Creating Tags
 
-
 #### 08.1 Creating Tag model
 
         modified:   README.md
@@ -341,7 +325,6 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         3. Register Tag model to admin
 
         NEXT: Creating and rendering tags to post
-
 
 #### 08.2 Creating and rendering tags to post
 
@@ -359,7 +342,6 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
 ## 08. Counting and Recording Views 
 
-
 #### 08.1 Adding view_count field to Post model
 
         modified:   README.md
@@ -373,7 +355,6 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         NEXT: Add view_count logic to detail_page view
 
-
 #### 08.2 Adding view_count logic to detail_page view
 
         modified:   README.md
@@ -384,7 +365,6 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         1. Adding logic to detail_page view to count and save each time of a view
 
         NEXT: Counting and recording the views 
-
 
 #### 08.3 Counting and recording the views 
 
@@ -404,9 +384,7 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         NEXT: User Comments
 
 
-
 ## 09. User Comments
-
 
 #### 09.1 Creating Comment model
 
@@ -423,7 +401,6 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         NEXT: Creating CommentForm model
 
-
 #### 09.2 Creating CommentForm model
 
         modified:   README.md
@@ -434,7 +411,6 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         1. Creating CommentForm model
 
         NEXT: Configuring comment in the detail_page view
-
 
 #### 09.3 Configuring comment in the detail_page view
 
@@ -448,7 +424,6 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         2. Correnting import typos in form.py
 
         NEXT: Creating comments 
-
 
 #### 09.4 Creating comments
 
@@ -484,7 +459,6 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         NEXT: Rendering comments
 
-
 #### 09.5 Rendering comments
 
         modified:   README.md
@@ -504,7 +478,6 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         2. Author image does not show up, because there is no author image in the Comment model.
 
         NEXT: Fixing the issues
-
 
 #### 09.6 Fixing issue comment re-render and author image
 
@@ -529,7 +502,6 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         NEXT: Building replies
 
-
 #### 09.7 Building replies to comments - Part 1: Create parent field in Comment model
 
         modified:   README.md
@@ -547,7 +519,6 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         NEXT: Allowing users to leave comments
 
-
 #### 09.8 Building replies to comments - Part 2: Configuring logic in detail_page view
 
         modified:   README.md
@@ -561,7 +532,6 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         NEXT: Allowing users to leave comments
 
-
 #### 09.9 Building replies to comments - Part 3: Rendering form instance to allow users to reply comments
 
         modified:   README.md
@@ -574,7 +544,6 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         3. Result: It worked, but it did not show the reply.
 
         NEXT: Rendering replies
-
 
 #### 09.10 Building replies to comments - Part 4: Rendering replies
 
@@ -627,12 +596,10 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         Thank you.
 
 
-
 ## Building Real World Project: A Blog Application - Building More Features
 
 
 ## 11. Homepage
-
 
 #### 11.1 Displaying popular posts on homepage
 
@@ -654,7 +621,6 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         NEXT: Rendering 3 newest posts
 
-
 #### 11.2 Displaying most recent posts on homepage
 
         modified:   README.md
@@ -665,3 +631,10 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         NEXT: Making users to subscribe
 
+
+#### 11.2 Subscribe - Part 1: Create Subscribe model
+
+        modified:   README.md
+        modified:   app/blog/admin.py (register Subscribe model)
+        new file:   app/blog/migrations/0003_subscribe_alter_post_tags.py (run and apply migrations)
+        modified:   app/blog/models.py (create Subscribe model)
