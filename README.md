@@ -647,3 +647,8 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         modified:   README.md
         modified:   app/blog/views.py (Use SubscribeForm in index view and add logic to it)
+
+#### 11.5 Subscribe - Part 4: Rendering subscribe_form instance to home page
+
+        modified:   README.md
+        modified:   templates/app/blog/index.html (render subscribe_form instance)
