@@ -7,6 +7,7 @@
 {% block content %}
 
     <!--======================= subscribe =======================-->
+
     <main class="sp">
       <div class="container">
         <center>
@@ -46,9 +47,10 @@
         </center>
       </div>
     </main>
-    <!--======================= subscribe =======================-->
 
+    <!--======================= subscribe =======================-->
     <!--===================== featured post ======================-->
+
     {% if featured_blog %}
     <section class="sp">
       <div class="container">
@@ -76,85 +78,53 @@
       </div>
     </section>
     {% endif %}
-    <!--===================== featured post ======================-->
 
+    <!--===================== featured post ======================-->
     <!--======================= top blogs =======================-->
+
     <section class="sp">
       <div class="container">
         <h1 class="sec-title">Top blogs</h1>
         <div class="grid-3">
 
-          {% for post in top_posts %}	
+          {% if recent_posts %}
+          {% for recent_post in recent_posts %}	
           <!-- card -->
-          <a href="{% url 'blog:detail' post.slug %}">
             <div class="card">
               <div class="post-img">
-                <img src="{{ post.image.url }}" alt="" />
-                <!-- post.tags.all()[0].name -->
-                <div class="tag">{{post.tags.all.0.name|capfirst}}</div>
+                <a href="{% url 'blog:detail' recent_post.slug %}">
+                <img src="{{ recent_post.image.url }}" alt="" />
+              </a>
+                {% if recent_post.tags %}
+                {% for tag in recent_post.tags.all %}
+                  <!-- post.tags.all()[0].name -->
+                  <a class="tag" href="{% url 'blog:tag_page' tag.slug %}"> {{recent_post.tags.all.0.name|capfirst}}
+                  </a>
+                {% endfor %}
+                {% endif %}
               </div>
               <div class="card-content">
                 <h3>
-                  {{ post.title }}
-                </h3>
-                <div class="author">
-                  <div class="profile-pic">
-                    <img src="{{ post.image.url }}" alt="" />
-                  </div>
-                  <div class="details">
-                    <p>{{ post.autor }}</p>
-                    <small>{{ post.date }}</small>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </a>
-          <!-- card end-->
-          {% endfor %}
-
-        </div>
-        <center>
-          <a href=""><button class="btn btn-primary rounded view">
-            View more <span class="material-icons"> trending_flat </span>
-          </button></a>
-        </center>
-      </div>
-    </section>
-    <!--======================= top blogs =======================-->
-
-    <!--======================= new blogs =======================-->
-    <section class="sp">
-      <div class="container">
-        <h1 class="sec-title">New blogs</h1>
-        <div class="grid-3">
-
-          {% for post in recent_posts %}
-          <!-- card -->
-          <a href="#">
-            <div class="card">
-              <div class="post-img">
-                <img src="{{post.image.url}}" alt="" />
-                <div class="tag">{{post.tags.all.0.name}}</div>
-              </div>
-              <div class="card-content">
-                <h3>
-                  {{post.title}}
+                  <a href="{% url 'blog:detail' recent_post.slug %}">
+                  {{ recent_post.title }}
+                  </a>
                 </h3>
                 <div class="author">
                   <div class="profile-pic">
                     <img src="{% static 'assets/images/author.svg' %}" alt="" />
                   </div>
                   <div class="details">
-                    <p>Author</p>
-                    <small>J{{post.date|date}}</small>
+                    <p>{{ recent_post.autor }}</p>
+                    <small>{{ recent_post.date }}</small>
                   </div>
                 </div>
               </div>
             </div>
-          </a>
+          
           <!-- card end-->
           {% endfor %}
-          
+          {% endif %}
+
         </div>
         <center>
           <a href=""><button class="btn btn-primary rounded view">
@@ -163,7 +133,66 @@
         </center>
       </div>
     </section>
+
+    <!--======================= top blogs =======================-->
     <!--======================= new blogs =======================-->
+
+    <section class="sp">
+      <div class="container">
+        <h1 class="sec-title">New Blogs</h1>
+        <div class="grid-3">
+
+          {% if top_posts %}
+          {% for top_post in top_posts %} 
+          <!-- card -->
+            <div class="card">
+              <div class="post-img">
+                <a href="{% url 'blog:detail' top_post.slug %}">
+                <img src="{{ top_post.image.url }}" alt="" />
+              </a>
+                {% if top_post.tags %}
+                {% for tag in top_post.tags.all %}
+                  <!-- post.tags.all()[0].name -->
+                  <a class="tag" href="{% url 'blog:tag_page' tag.slug %}"> {{top_post.tags.all.0.name|capfirst}}
+                  </a>
+                {% endfor %}
+                {% endif %}
+              </div>
+              <div class="card-content">
+                <h3>
+                  <a href="{% url 'blog:detail' top_post.slug %}">
+                  {{ top_post.title }}
+                  </a>
+                </h3>
+                <div class="author">
+                  <div class="profile-pic">
+                    <img src="{% static 'assets/images/author.svg' %}" alt="" />
+                  </div>
+                  <div class="details">
+                    <p>{{ top_post.autor }}</p>
+                    <small>{{ top_post.date }}</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+          <!-- card end-->
+          {% endfor %}
+          {% endif %}
+
+        </div>
+        <center>
+          <a href=""><button class="btn btn-primary rounded view">
+            View more <span class="material-icons"> trending_flat </span>
+          </button></a>
+        </center>
+      </div>
+    </section>
+
+    <!--======================= new blogs =======================-->
+
+
+
 
 
 {% endblock content %}

@@ -743,3 +743,50 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
                 # http://127.0.0.1:8000/tag/django
                 <a class="tag" href="{% url 'blog:tag_page' tag.slug %}">{{tag.name}}</a>
         {% endfor %}
+
+#### 12.9 Tag - Part 9: Add link to posts by tag and dynamic page title
+
+        modified:   README.md
+
+        1. Add link to posts by tag
+        modified:   templates/app/blog/index.html
+
+          {% if recent_posts %}
+          {% for recent_post in recent_posts %} 
+          <!-- card -->
+            <div class="card">
+              <div class="post-img">
+                <a href="{% url 'blog:detail' recent_post.slug %}">
+                <img src="{{ recent_post.image.url }}" alt="" />
+              </a>
+                {% if recent_post.tags %}
+                {% for tag in recent_post.tags.all %}
+                  <!-- post.tags.all()[0].name -->
+                  <a class="tag" href="{% url 'blog:tag_page' tag.slug %}"> {{recent_post.tags.all.0.name|capfirst}}
+                  </a>
+                {% endfor %}
+                {% endif %}
+              </div>
+              <div class="card-content">
+                <h3>
+                  <a href="{% url 'blog:detail' recent_post.slug %}">
+                  {{ recent_post.title }}
+                  </a>
+                </h3>
+                <div class="author">
+                  <div class="profile-pic">
+                    <img src="{% static 'assets/images/author.svg' %}" alt="" />
+                  </div>
+                  <div class="details">
+                    <p>{{ recent_post.autor }}</p>
+                    <small>{{ recent_post.date }}</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!-- card end-->
+          {% endfor %}
+          {% endif %}
+
+        modified:   templates/app/blog/tag.html
+        modified:   templates/partials/header.html
