@@ -6,7 +6,7 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 
 # Import from locals
-from app.blog.models import Post 
+from app.blog.models import Post, Tag 
 from app.blog.forms import CommentForm
 from app.blog.models import Comment
 from app.blog.forms import SubscribeForm
@@ -104,4 +104,12 @@ def detail_page(request, slug):
 
 # VIEWS: tag_page
 def tag_page(request, slug):
-    return render(request, 'app/blog/tag.html')
+
+    # Get single tag instance
+    tag = Tag.objects.get(slug=slug)
+
+    context = {
+        'tag':tag,
+    }
+    
+    return render(request, 'app/blog/tag.html', context)

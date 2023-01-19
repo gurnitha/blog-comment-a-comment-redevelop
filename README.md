@@ -680,3 +680,9 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         modified:   README.md
         modified:   templates/app/blog/tag.html
+
+#### 12.3 Tag - Part 3: Get a tag object and reder it to tag page
+
+        modified:   README.md
+        modified:   app/blog/views.py (get a tag object)
+        modified:   templates/app/blog/tag.html (reder it to tag page)
