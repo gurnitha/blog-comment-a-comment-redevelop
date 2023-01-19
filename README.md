@@ -665,3 +665,13 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         modified:   app/blog/models.py (add is_featured boolean field)
         modified:   app/blog/views.py (add logic to get the featured post instance)
         modified:   templates/app/blog/index.html (render the featured blog instances)
+
+
+## 12. Tags
+
+#### 12.1 Tag - Part 1: Creating tag page
+
+        modified:   README.md
+        modified:   app/blog/urls.py
+        modified:   app/blog/views.py
+        new file:   templates/app/blog/tag.html

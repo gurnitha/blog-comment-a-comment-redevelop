@@ -100,3 +100,8 @@ def detail_page(request, slug):
         'comments':comments,
     }
     return render(request, 'app/blog/detail.html', context)
+
+
+# VIEWS: tag_page
+def tag_page(request, slug):
+    return render(request, 'app/blog/tag.html')
