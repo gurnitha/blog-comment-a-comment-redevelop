@@ -675,3 +675,8 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         modified:   app/blog/urls.py
         modified:   app/blog/views.py
         new file:   templates/app/blog/tag.html
+
+#### 12.2 Tag - Part 2: Adding html template to tag page 
+
+        modified:   README.md
+        modified:   templates/app/blog/tag.html
