@@ -169,35 +169,27 @@
           <!-- right layout -->
           <div class="right">
             <div class="block">
-              <h2 class="title2">Top Tags</h2>
+              <h2 class="title2">Tags</h2>
               <div class="blog-tags">
-                <div class="tag">Tag</div>
-                <div class="tag">Tag content</div>
-                <div class="tag">Tag</div>
-                <div class="tag">Tag content</div>
-                <div class="tag">Tag content</div>
-                <div class="tag">Tag</div>
-                <div class="tag">Tag content</div>
-                <div class="tag">Tag content</div>
-                <div class="tag">Tag</div>
-                <div class="tag">Tag content</div>
-                <div class="tag">Tag</div>
+                {% for tag in tags %}
+                <div class="tag">{{tag.name|capfirst}}</div>
+                {% endfor %}
               </div>
             </div>
             <div class="block">
-              <h2 class="title2">Other Tags</h2>
+              <h2 class="title2">Categories</h2>
               <div class="blog-tags">
-                <div class="tag">Tag</div>
-                <div class="tag">Tag content</div>
-                <div class="tag">Tag</div>
-                <div class="tag">Tag content</div>
-                <div class="tag">Tag content</div>
-                <div class="tag">Tag</div>
-                <div class="tag">Tag content</div>
-                <div class="tag">Tag content</div>
-                <div class="tag">Tag</div>
-                <div class="tag">Tag content</div>
-                <div class="tag">Tag</div>
+                <div class="tag">Category</div>
+                <div class="tag">Category content</div>
+                <div class="tag">Category</div>
+                <div class="tag">Category content</div>
+                <div class="tag">Category content</div>
+                <div class="tag">Category</div>
+                <div class="tag">Category content</div>
+                <div class="tag">Category content</div>
+                <div class="tag">Category</div>
+                <div class="tag">Category content</div>
+                <div class="tag">Category</div>
               </div>
             </div>
           </div>

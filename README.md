@@ -722,3 +722,9 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         2. Render objects
         modified:   templates/app/blog/tag.html
+
+#### 12.7 Tag - Part 7: Get and render all tags
+
+        modified:   README.md
+        modified:   app/blog/views.py
+        modified:   templates/app/blog/tag.html
