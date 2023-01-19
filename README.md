@@ -631,10 +631,14 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         NEXT: Making users to subscribe
 
-
 #### 11.2 Subscribe - Part 1: Create Subscribe model
 
         modified:   README.md
         modified:   app/blog/admin.py (register Subscribe model)
         new file:   app/blog/migrations/0003_subscribe_alter_post_tags.py (run and apply migrations)
         modified:   app/blog/models.py (create Subscribe model)
+
+#### 11.3 Subscribe - Part 2: Create SubscribeForm model
+
+        modified:   README.md
+        modified:   app/blog/forms.py (Create SubscribeForm model)
