@@ -698,3 +698,15 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         2. Reder the object
         modified:   templates/app/blog/tag.html
+
+#### 12.5 Tag - Part 5: Get 3 objects of the most recent posts by a spesific tag
+
+        modified:   README.md
+        1. Add logic
+        modified:   app/blog/views.py
+
+        # Get 3 objects the most recent posts by a spesific tag
+        recent_posts = Post.objects.filter(tags__in=[tag.id]).order_by('-last_updated')[0:3]
+
+        2. Render objects
+        modified:   templates/app/blog/tag.html
