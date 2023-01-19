@@ -114,10 +114,14 @@ def tag_page(request, slug):
     # Get 3 objects the most recent posts by a spesific tag
     recent_posts = Post.objects.filter(tags__in=[tag.id]).order_by('-last_updated')[0:3]
 
+    # Get 3 objects of featured posts by a spesific tag
+    featureds = Post.objects.filter(tags__in=[tag.id],is_featured = True).order_by('-view_count')[0:3]
+
     context = {
         'tag':tag,
         'top_posts':top_posts,
         'recent_posts':recent_posts,
+        'featurals':featureds,
     }
     
     return render(request, 'app/blog/tag.html', context)

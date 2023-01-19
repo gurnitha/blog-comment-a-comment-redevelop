@@ -710,3 +710,15 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         2. Render objects
         modified:   templates/app/blog/tag.html
+
+#### 12.6 Tag - Part 6: Get 3 objects of the featured posts by a spesific tag
+
+        modified:   README.md
+        1. Add logic
+        modified:   app/blog/views.py
+
+        # Get 3 objects of featured posts by a spesific tag
+        featureds = Post.objects.filter(tags__in=[tag.id],is_featured = True).order_by('-view_count')[0:3]
+
+        2. Render objects
+        modified:   templates/app/blog/tag.html

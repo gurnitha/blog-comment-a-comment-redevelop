@@ -115,93 +115,51 @@
               </div>
             </section>
 
-            <!-- Featured -->
+            <!-- Featural -->
             <section class="sp">
               <div class="container">
-                <h1 class="sec-title">Featueal</h1>
+                <h1 class="sec-title">Featural</h1>
                 <div class="grid-3 blog-grid">
-                  <!-- card -->
-                  <a href="#">
-                    <div class="card">
-                      <div class="post-img">
-                        <img src="{% static 'assets/images/post.png' %}" alt="" />
-                        <div class="tag">Tag name</div>
-                      </div>
-                      <div class="card-content">
-                        <h3>
-                          A blog title and other stuffs will add here, also we
-                          can include.
-                        </h3>
-                        <div class="author">
-                          <div class="profile-pic">
-                            <img src="{% static 'assets/images/author.svg' %}" alt="" />
-                          </div>
-                          <div class="details">
-                            <p>Author name</p>
-                            <small>June 20, 2022</small>
+                  {% if featurals %}
+                    {% for featural in featurals %}
+                    <!-- card -->
+                    <a href="#">
+                      <div class="card">
+                        <div class="post-img">
+                          <img src="{{featural.image.url}}" alt="" />
+                          <div class="tag">{{featural.tags.all.0.name|capfirst}}</div>
+                        </div>
+                        <div class="card-content">
+                          <h3>
+                            {{featural.title|capfirst}}
+                          </h3>
+                          <div class="author">
+                            <div class="profile-pic">
+                              <img src="{% static 'assets/images/author.svg' %}" alt="" />
+                            </div>
+                            <div class="details">
+                              <p>Author name</p>
+                              <small>{{featural.last_updated|date}}</small>
+                            </div>
                           </div>
                         </div>
                       </div>
-                    </div>
-                  </a>
-                  <!-- card end-->
-                  <!-- card -->
-                  <a href="#">
-                    <div class="card">
-                      <div class="post-img">
-                        <img src="{% static 'assets/images/post.png' %}" alt="" />
-                        <div class="tag">Tag name</div>
-                      </div>
-                      <div class="card-content">
-                        <h3>
-                          A blog title and other stuffs will add here, also we
-                          can include.
-                        </h3>
-                        <div class="author">
-                          <div class="profile-pic">
-                            <img src="{% static 'assets/images/author.svg' %}" alt="" />
-                          </div>
-                          <div class="details">
-                            <p>Author name</p>
-                            <small>June 20, 2022</small>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                  <!-- card end-->
-                  <!-- card -->
-                  <a href="#">
-                    <div class="card">
-                      <div class="post-img">
-                        <img src="{% static 'assets/images/post.png' %}" alt="" />
-                        <div class="tag">Tag name</div>
-                      </div>
-                      <div class="card-content">
-                        <h3>
-                          A blog title and other stuffs will add here, also we
-                          can include.
-                        </h3>
-                        <div class="author">
-                          <div class="profile-pic">
-                            <img src="{% static 'assets/images/author.svg' %}" alt="" />
-                          </div>
-                          <div class="details">
-                            <p>Author name</p>
-                            <small>June 20, 2022</small>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                  <!-- card end-->
+                    </a>
+                  {% endfor %} 
+                    <!-- card end-->
+                    {% else %}
+                    <p>No featural post found ..</p>
+                  {% endif %}
                 </div>
+                {% if featurals %}
                 <center>
                   <button class="btn btn-primary rounded view">
                     View more
                     <span class="material-icons"> trending_flat </span>
                   </button>
                 </center>
+                {% else %}
+                {% endif %}
               </div>
             </section>
             
