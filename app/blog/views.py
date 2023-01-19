@@ -9,20 +9,38 @@ from django.urls import reverse
 from app.blog.models import Post 
 from app.blog.forms import CommentForm
 from app.blog.models import Comment
+from app.blog.forms import SubscribeForm
 
 # VIEWS: home_page
 def home_page(request):
     posts = Post.objects.all()
     # Get 3 most viewed post
     top_posts = Post.objects.all().order_by('-view_count')[0:3]
+    # print(top_posts)
     recent_posts = Post.objects.all().order_by('-last_updated')[0:3]
-    print(top_posts)
-    print(recent_posts)
+    # print(recent_posts)
+
+    # Using SubscribeForm
+    subscribe_form = SubscribeForm
+    # If something wrong, render None
+    subscribe_successful = None 
+    # If form submited
+    if request.POST:
+        subscribe_form = SubscribeForm(request.POST)
+        if subscribe_form.is_valid():
+            subscribe_form.save()
+            subscribe_successful = 'Subscribe successfully'
+            # Clearing the form after submiting it
+            subscribe_form = SubscribeForm()
+
     context = {
         'posts':posts,
         'top_posts':top_posts,
         'recent_posts':recent_posts,
+        'subscribe_form':subscribe_form, 
+        'subscribe_successful':subscribe_successful,
     }
+
     return render(request, 'app/blog/index.html', context)
 
 

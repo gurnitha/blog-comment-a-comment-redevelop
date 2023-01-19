@@ -642,3 +642,8 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         modified:   README.md
         modified:   app/blog/forms.py (Create SubscribeForm model)
+
+#### 11.4 Subscribe - Part 3: Using SubscribeForm model in indev views
+
+        modified:   README.md
+        modified:   app/blog/views.py (Use SubscribeForm in index view and add logic to it)
