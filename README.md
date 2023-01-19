@@ -340,9 +340,9 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         NEXT: Counting and Recording Views 
 
 
-## 08. Counting and Recording Views 
+## 09. Counting and Recording Views 
 
-#### 08.1 Adding view_count field to Post model
+#### 09.1 Adding view_count field to Post model
 
         modified:   README.md
         new file:   app/blog/migrations/0003_post_view_count.py
@@ -355,7 +355,7 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         NEXT: Add view_count logic to detail_page view
 
-#### 08.2 Adding view_count logic to detail_page view
+#### 09.2 Adding view_count logic to detail_page view
 
         modified:   README.md
         modified:   app/blog/views.py
@@ -366,7 +366,7 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         NEXT: Counting and recording the views 
 
-#### 08.3 Counting and recording the views 
+#### 09.3 Counting and recording the views 
 
         modified:   README.md
         modified:   templates/app/blog/detail.html
@@ -384,9 +384,9 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         NEXT: User Comments
 
 
-## 09. User Comments
+## 10. User Comments
 
-#### 09.1 Creating Comment model
+#### 10.1 Creating Comment model
 
         modified:   README.md
         modified:   app/blog/admin.py
@@ -401,7 +401,7 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         NEXT: Creating CommentForm model
 
-#### 09.2 Creating CommentForm model
+#### 10.2 Creating CommentForm model
 
         modified:   README.md
         new file:   app/blog/forms.py
@@ -412,7 +412,7 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         NEXT: Configuring comment in the detail_page view
 
-#### 09.3 Configuring comment in the detail_page view
+#### 10.3 Configuring comment in the detail_page view
 
         modified:   README.md
         modified:   app/blog/forms.py
@@ -425,7 +425,7 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         NEXT: Creating comments 
 
-#### 09.4 Creating comments
+#### 10.4 Creating comments
 
         modified:   README.md
         modified:   app/blog/migrations/0001_initial.py
@@ -459,7 +459,7 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         NEXT: Rendering comments
 
-#### 09.5 Rendering comments
+#### 10.5 Rendering comments
 
         modified:   README.md
         modified:   app/blog/views.py
@@ -479,7 +479,7 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         NEXT: Fixing the issues
 
-#### 09.6 Fixing issue comment re-render and author image
+#### 10.6 Fixing issue comment re-render and author image
 
         modified:   README.md
         modified:   app/blog/views.py
@@ -502,7 +502,7 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         NEXT: Building replies
 
-#### 09.7 Building replies to comments - Part 1: Create parent field in Comment model
+#### 10.7 Building replies to comments - Part 1: Create parent field in Comment model
 
         modified:   README.md
         new file:   app/blog/migrations/0002_comment_parent.py
@@ -519,7 +519,7 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         NEXT: Allowing users to leave comments
 
-#### 09.8 Building replies to comments - Part 2: Configuring logic in detail_page view
+#### 10.8 Building replies to comments - Part 2: Configuring logic in detail_page view
 
         modified:   README.md
         modified:   app/blog/views.py
@@ -532,7 +532,7 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         NEXT: Allowing users to leave comments
 
-#### 09.9 Building replies to comments - Part 3: Rendering form instance to allow users to reply comments
+#### 10.9 Building replies to comments - Part 3: Rendering form instance to allow users to reply comments
 
         modified:   README.md
         modified:   templates/app/blog/detail.html
@@ -545,13 +545,13 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         NEXT: Rendering replies
 
-#### 09.10 Building replies to comments - Part 4: Rendering replies
+#### 10.10 Building replies to comments - Part 4: Rendering replies
 
         modified:   README.md
         modified:   templates/app/blog/detail.html
 
 
-## 10 Section Summary
+## 11 Section Summary
 
 
         Hello guys. Welcome to this class.
@@ -599,9 +599,9 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 ## Building Real World Project: A Blog Application - Building More Features
 
 
-## 11. Homepage
+## 12. Homepage
 
-#### 11.1 Displaying popular posts on homepage
+#### 12.1 Displaying popular posts on homepage
 
         modified:   app/blog/views.py
         modified:   templates/app/blog/index.html
@@ -621,44 +621,44 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         NEXT: Rendering 3 newest posts
 
-#### 11.2 Displaying most recent posts on homepage
+#### 12.2 Displaying most recent posts on homepage
 
         modified:   README.md
         modified:   app/blog/views.py
         modified:   templates/app/blog/index.html
 
-        NOTE: Almost the same as 11.1
+        NOTE: Almost the same as 12.1
 
         NEXT: Making users to subscribe
 
-#### 11.2 Subscribe - Part 1: Create Subscribe model
+#### 12.2 Subscribe - Part 1: Create Subscribe model
 
         modified:   README.md
         modified:   app/blog/admin.py (register Subscribe model)
         new file:   app/blog/migrations/0003_subscribe_alter_post_tags.py (run and apply migrations)
         modified:   app/blog/models.py (create Subscribe model)
 
-#### 11.3 Subscribe - Part 2: Create SubscribeForm model
+#### 12.3 Subscribe - Part 2: Create SubscribeForm model
 
         modified:   README.md
         modified:   app/blog/forms.py (Create SubscribeForm model)
 
-#### 11.4 Subscribe - Part 3: Using SubscribeForm model in indev views
+#### 12.4 Subscribe - Part 3: Using SubscribeForm model in indev views
 
         modified:   README.md
         modified:   app/blog/views.py (Use SubscribeForm in index view and add logic to it)
 
-#### 11.5 Subscribe - Part 4: Rendering subscribe_form instance to home page
+#### 12.5 Subscribe - Part 4: Rendering subscribe_form instance to home page
 
         modified:   README.md
         modified:   templates/app/blog/index.html (render subscribe_form instance)
 
-#### 11.6 Subscribe - Part 5: Configure Subscribe table display in admin panel
+#### 12.6 Subscribe - Part 5: Configure Subscribe table display in admin panel
 
         modified:   README.md
         modified:   app/blog/admin.py
 
-#### 11.7 Configuring and rendering featured posts
+#### 12.7 Configuring and rendering featured posts
 
         modified:   README.md
         new file:   app/blog/migrations/0004_post_is_featured.py (run and apply migrations)
@@ -667,27 +667,27 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         modified:   templates/app/blog/index.html (render the featured blog instances)
 
 
-## 12. Tags
+## 13. Tags
 
-#### 12.1 Tag - Part 1: Creating tag page
+#### 13.1 Tag - Part 1: Creating tag page
 
         modified:   README.md
         modified:   app/blog/urls.py
         modified:   app/blog/views.py
         new file:   templates/app/blog/tag.html
 
-#### 12.2 Tag - Part 2: Adding html template to tag page 
+#### 13.2 Tag - Part 2: Adding html template to tag page 
 
         modified:   README.md
         modified:   templates/app/blog/tag.html
 
-#### 12.3 Tag - Part 3: Get a tag object and reder it to tag page
+#### 13.3 Tag - Part 3: Get a tag object and reder it to tag page
 
         modified:   README.md
         modified:   app/blog/views.py (get a tag object)
         modified:   templates/app/blog/tag.html (reder it to tag page)
 
-#### 12.4 Tag - Part 4: Get 2 objects of the most viewed posts by a spesific tag
+#### 13.4 Tag - Part 4: Get 2 objects of the most viewed posts by a spesific tag
 
         modified:   README.md
         1. Add logic
@@ -699,7 +699,7 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         2. Reder the object
         modified:   templates/app/blog/tag.html
 
-#### 12.5 Tag - Part 5: Get 3 objects of the most recent posts by a spesific tag
+#### 13.5 Tag - Part 5: Get 3 objects of the most recent posts by a spesific tag
 
         modified:   README.md
         1. Add logic
@@ -711,7 +711,7 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         2. Render objects
         modified:   templates/app/blog/tag.html
 
-#### 12.6 Tag - Part 6: Get 3 objects of the featured posts by a spesific tag
+#### 13.6 Tag - Part 6: Get 3 objects of the featured posts by a spesific tag
 
         modified:   README.md
         1. Add logic
@@ -723,13 +723,13 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         2. Render objects
         modified:   templates/app/blog/tag.html
 
-#### 12.7 Tag - Part 7: Get and render all tags
+#### 13.7 Tag - Part 7: Get and render all tags
 
         modified:   README.md
         modified:   app/blog/views.py
         modified:   templates/app/blog/tag.html
 
-#### 12.8 Tag - Part 8: Showing posts by tag from tag's link in post detail
+#### 13.8 Tag - Part 8: Showing posts by tag from tag's link in post detail
 
         modified:   README.md
         1. Modified blog path
@@ -744,7 +744,7 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
                 <a class="tag" href="{% url 'blog:tag_page' tag.slug %}">{{tag.name}}</a>
         {% endfor %}
 
-#### 12.9 Tag - Part 9: Add link to posts by tag and dynamic page title
+#### 13.9 Tag - Part 9: Add link to posts by tag and dynamic page title
 
         modified:   README.md
 
@@ -790,3 +790,7 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         modified:   templates/app/blog/tag.html
         modified:   templates/partials/header.html
+
+#### 13.10 Modified readme file 
+
+        modified:   README.md
