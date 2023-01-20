@@ -855,3 +855,26 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         Out[6]: <ImageFieldFile: images/ing.jfif>
 
         In [7]: exit()
+
+#### 14.4 Render the author's username and profile_image in tag page
+
+        modified:   README.md
+
+        1. Render author's username
+        modified:   templates/app/blog/tag.html
+
+        <!--  
+              How to render author username, first_name or last_name ?
+
+              <p>{{top_post.author.username}}</p>
+
+              use: 
+              var instance + author field in Post model 
+              + (username, first_name, or last_name from the default User model)
+        -->
+
+        2. Rendering author's profile_image:
+
+        var instance + author field in Post model + Profile model + profile_image + url
+
+        <img src="{{top_post.author.profile.profile_image.url}}" alt="" />

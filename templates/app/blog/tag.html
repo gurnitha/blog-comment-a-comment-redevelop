@@ -51,10 +51,17 @@
                         </h3>
                         <div class="author">
                           <div class="profile-pic">
-                            <img src="{% static 'assets/images/author.svg' %}" alt="" />
+                            <img src="{{top_post.author.profile.profile_image.url}}" alt="" />
                           </div>
                           <div class="details">
-                            <p>Author name</p>
+                            <!--  
+                              How to render author username, first_name or last_name ?
+
+                              use: 
+                              var instance + author field in Post model 
+                              + (username, first_name, or last_name from the default User model)
+                            -->
+                            <p>{{top_post.author.username}}</p>
                             <small>{{top_post.last_updated|date}}</small>
                           </div>
                         </div>
@@ -87,10 +94,10 @@
                         </h3>
                         <div class="author">
                           <div class="profile-pic">
-                            <img src="{% static 'assets/images/author.svg' %}" alt="" />
+                            <img src="{{recent_post.author.profile.profile_image.url}}" alt="" />
                           </div>
                           <div class="details">
-                            <p>Author name</p>
+                            <p>{{recent_post.author.last_name}}</p>
                             <small>{{recent_post.last_updated|date}}</small>
                           </div>
                         </div>
