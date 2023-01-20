@@ -804,6 +804,13 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         modified:   README.md
         modified:   app/blog/admin.py (register model)
-        new file:   app/blog/migrations/0005_profile.py
+        new file:   app/blog/migrations/0005_profile.py (run and apply migrations)
         modified:   app/blog/models.py (create Profile model)
         new file:   upload/images/ing.jfif (create a profile from admin panel)
+
+#### 14.2 Add author field in Post model
+
+        modified:   README.md
+        new file:   app/blog/migrations/0006_post_author.py (run and apply migrations)
+        modified:   app/blog/models.py (add author field)
+        >> author = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
