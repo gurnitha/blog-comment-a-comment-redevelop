@@ -111,10 +111,19 @@
                 </h3>
                 <div class="author">
                   <div class="profile-pic">
-                    <img src="{% static 'assets/images/author.svg' %}" alt="" />
+                    <!-- 
+                    The way how to render author last_name and its profile_image 
+                    
+                    Post model, has author field: author = models.ForeignKey(User, ..
+                    Profile model, has profile_image field: profile_image = models.ImageField
+                    To get the author image: {{recent_post.author.profile.profile_image.url}}
+                    1. use the var instance, 2. author field in Post model, 3. go to Profile model, 4. use profile_image
+                    recent_post>>author field>>profile model>>profile_image field>>url
+                    -->
+                    <img src="{{recent_post.author.profile.profile_image.url}}" alt="" />
                   </div>
                   <div class="details">
-                    <p>{{ recent_post.autor }}</p>
+                    <p>{{ recent_post.author.last_name }}</p>
                     <small>{{ recent_post.date }}</small>
                   </div>
                 </div>
@@ -166,10 +175,10 @@
                 </h3>
                 <div class="author">
                   <div class="profile-pic">
-                    <img src="{% static 'assets/images/author.svg' %}" alt="" />
+                    <img src="{{top_post.author.profile.profile_image.url}}" alt="" />
                   </div>
                   <div class="details">
-                    <p>{{ top_post.autor }}</p>
+                    <p>{{ top_post.author.last_name }}</p>
                     <small>{{ top_post.date }}</small>
                   </div>
                 </div>

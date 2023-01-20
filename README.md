@@ -814,3 +814,44 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         new file:   app/blog/migrations/0006_post_author.py (run and apply migrations)
         modified:   app/blog/models.py (add author field)
         >> author = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
+
+#### 14.3 Render the author name and image in home page
+
+        modified:   README.md
+        1. Render author last_name and profile_image
+        modified:   templates/app/blog/index.html
+
+        <!-- 
+            The way how to render author last_name and its profile_image
+
+            Post model, has author field: author = models.ForeignKey(User, ..
+            Profile model, has profile_image field: profile_image = models.ImageField
+            To get the author image: {{recent_post.author.profile.profile_image.url}}
+            1. use the var instance, 2. author field in Post model, 3. go to Profile model, 4. use profile_image
+            recent_post>>author field>>profile model>>profile_image field>>url
+        -->
+        (venv3941) λ python manage.py shell
+        ...
+
+        In [1]: from app.blog.models import Post
+
+        In [2]: post_1 = Post.objects.get(id=1)
+
+        In [3]: post_1
+        Out[3]: <Post: Post object (1)>
+
+        In [4]: post_1.author
+        Out[4]: <User: admin>
+
+        In [5]: post_1.author.profile_image
+        ---------------------------------------------------------------------------
+        AttributeError                            Traceback (most recent call last)
+        <ipython-input-5-f57fdaf87e90> in <module>
+        ----> 1 post_1.author.profile_image
+
+        AttributeError: 'User' object has no attribute 'profile_image'
+
+        In [6]: post_1.author.profile.profile_image
+        Out[6]: <ImageFieldFile: images/ing.jfif>
+
+        In [7]: exit()
