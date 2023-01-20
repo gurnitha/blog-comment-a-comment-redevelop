@@ -924,3 +924,9 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         http://127.0.0.1:8000/author/admin
 
         4. Result :)
+
+#### 14.8 Building author page - Part 4: Rendering 2 most viewed posts by a spesific author
+
+        modified:   README.md
+        modified:   app/blog/views.py
+        modified:   templates/app/blog/author.html

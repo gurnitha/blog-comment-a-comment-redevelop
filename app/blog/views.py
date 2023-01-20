@@ -134,7 +134,13 @@ def tag_page(request, slug):
 def author_page(request, slug):
     profile = Profile.objects.get(slug=slug)
     # print(profile)
+
+    # Get 2 most viewed post by a spesific author
+    top_posts = Post.objects.filter(author__in=[profile.id]).order_by('-view_count')[0:2]
+    print(top_posts)
+    
     context = {
         'profile':profile,
+        'top_posts':top_posts,
     }
     return render(request, 'app/blog/author.html', context)
