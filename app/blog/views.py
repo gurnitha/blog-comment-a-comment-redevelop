@@ -140,12 +140,17 @@ def author_page(request, slug):
     # print(top_posts)
 
     # Get 3 most recent posts by a spesific author
-    recent_posts = Post.objects.filter(author__in=[profile.id]).order_by('-last_updated')[0:2]
-    print(recent_posts)
+    recent_posts = Post.objects.filter(author__in=[profile.id]).order_by('-last_updated')[0:3]
+    # print(recent_posts)
+
+    # Get 3 most featured posts by a spesific author
+    feature_posts = Post.objects.filter(author__in=[profile.id], is_featured=True).order_by('-last_updated')[0:3]
+    # print(recent_posts)
 
     context = {
         'profile':profile,
         'top_posts':top_posts,
         'recent_posts':recent_posts,
+        'feature_posts':feature_posts,
     }
     return render(request, 'app/blog/author.html', context)

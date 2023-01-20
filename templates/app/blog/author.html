@@ -101,7 +101,7 @@
                           </div>
                           <div class="details">
                             <p>{{recent_post.author.last_name|capfirst}}</p>
-                            <small>June 20, 2022</small>
+                            <small>{{recent_post.last_updated|date}}</small>
                           </div>
                         </div>
                       </div>
@@ -127,81 +127,39 @@
               <div class="container">
                 <h1 class="sec-title">Featural</h1>
                 <div class="grid-3 blog-grid">
+
+                  {% if feature_posts %}
+                  {% for feature_post in feature_posts %}	
                   <!-- card -->
                   <a href="#">
                     <div class="card">
                       <div class="post-img">
-                        <img src="{% static 'assets/images/post.png' %}" alt="" />
+                        <img src="{{feature_post.image.url}}" alt="" />
                         <div class="tag">Tag name</div>
                       </div>
                       <div class="card-content">
                         <h3>
-                          A blog title and other stuffs will add here, also we
-                          can include.
+                          {{feature_post.title|capfirst}}
                         </h3>
                         <div class="author">
                           <div class="profile-pic">
-                            <img src="{% static 'assets/images/author.svg' %}" alt="" />
+                            <img src="{{feature_post.author.profile.profile_image.url}}" alt="" />
                           </div>
                           <div class="details">
-                            <p>Author name</p>
-                            <small>June 20, 2022</small>
+                            <p>{{feature_post.author.first_name}}</p>
+                            <small>{{feature_post.last_updated|date}}</small>
                           </div>
                         </div>
                       </div>
                     </div>
                   </a>
                   <!-- card end-->
-                  <!-- card -->
-                  <a href="#">
-                    <div class="card">
-                      <div class="post-img">
-                        <img src="{% static 'assets/images/post.png' %}" alt="" />
-                        <div class="tag">Tag name</div>
-                      </div>
-                      <div class="card-content">
-                        <h3>
-                          A blog title and other stuffs will add here, also we
-                          can include.
-                        </h3>
-                        <div class="author">
-                          <div class="profile-pic">
-                            <img src="{% static 'assets/images/author.svg' %}" alt="" />
-                          </div>
-                          <div class="details">
-                            <p>Author name</p>
-                            <small>June 20, 2022</small>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                  <!-- card end-->
-                  <!-- card -->
-                  <a href="#">
-                    <div class="card">
-                      <div class="post-img">
-                        <img src="{% static 'assets/images/post.png' %}" alt="" />
-                        <div class="tag">Tag name</div>
-                      </div>
-                      <div class="card-content">
-                        <h3>
-                          A blog title and other stuffs will add here, also we
-                          can include.
-                        </h3>
-                        <div class="author">
-                          <div class="profile-pic">
-                            <img src="{% static 'assets/images/author.svg' %}" alt="" />
-                          </div>
-                          <div class="details">
-                            <p>Author name</p>
-                            <small>June 20, 2022</small>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                  <!-- card end-->
+                  {% endfor %}
+                  {% else %}
+                  <p>No feature post found ...</p>
+                  {% endif %}
+
+
                 </div>
                 <center>
                   <button class="btn btn-primary rounded view">

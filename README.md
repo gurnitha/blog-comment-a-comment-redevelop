@@ -931,7 +931,13 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         modified:   app/blog/views.py
         modified:   templates/app/blog/author.html
 
-#### 14.9 Building author page - Part 5: Rendering 3 most recent osts by a spesific author
+#### 14.9 Building author page - Part 5: Rendering 3 most recent posts by a spesific author
 
+        modified:   app/blog/views.py
+        modified:   templates/app/blog/author.html
+
+#### 14.10 Building author page - Part 6: Rendering 3 feature posts by a spesific author
+
+        modified:   README.md
         modified:   app/blog/views.py
         modified:   templates/app/blog/author.html
