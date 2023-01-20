@@ -799,3 +799,11 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 ## 14. Author
 
         modified:   README.md
+
+#### 14.1 Create Profile model
+
+        modified:   README.md
+        modified:   app/blog/admin.py (register model)
+        new file:   app/blog/migrations/0005_profile.py
+        modified:   app/blog/models.py (create Profile model)
+        new file:   upload/images/ing.jfif (create a profile from admin panel)
