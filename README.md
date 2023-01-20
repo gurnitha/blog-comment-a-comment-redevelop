@@ -957,3 +957,14 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         1. It worked in the author.html
         2. Next to render the top authors 
+
+#### 14.12 Building author page - Part 8: Showing the top authors
+
+        modified:   README.md
+
+        1. Get the top_authors
+        modified:   app/blog/views.py
+        top_authors = User.objects.annotate(number=Count('post')).order_by('-number') 
+
+        2. Render it to author page
+        modified:   templates/app/blog/author.html

@@ -167,13 +167,17 @@ def author_page(request, slug):
     profile = Profile.objects.get(slug=slug)
 
     top_posts = Post.objects.filter(author = profile.user).order_by('-view_count')[0:2]
-    recent_posts = Post.objects.filter(author = profile.user).order_by('-last_updated')[0:2]
-    top_authors = User.objects.annotate(number=Count('post')).order_by('number') 
+    recent_posts = Post.objects.filter(author = profile.user).order_by('-last_updated')[0:3]
+    top_authors = User.objects.annotate(number=Count('post')).order_by('-number') 
+
+    tags = Tag.objects.all()
 
     context={
         'profile':profile,
         'top_posts':top_posts, 
         'recent_posts':recent_posts, 
-        'top_authors':top_authors}
+        'top_authors':top_authors,
+        'tags':tags,
+    }
 
-    return render(request, 'app/blog/tag.html', context)
+    return render(request, 'app/blog/author.html', context)

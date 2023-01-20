@@ -176,17 +176,18 @@
           <!-- right layout -->
           <div class="right">
 
+            
           	<!-- top authors -->
             <div class="block">
               <h2 class="title2">Top Authors</h2>
+              {% for top_author in top_authors %}
               <div class="recent-post other-author">
                 <div class="rounded-img">
-                  <img src="{% static 'assets/images/post.png' %}" alt="" />
+                  <img src="{{top_author.profile.profile_image.url}}" alt="" />
                 </div>
                 <div class="recent-content">
                   <h3>
-                    A blog title and other stuffs will add here, also we can
-                    incluse.
+                    {{top_author.first_name|capfirst}}
                   </h3>
                   <a class="learn" href="#"
                     >Learn more
@@ -194,87 +195,21 @@
                   >
                 </div>
               </div>
-              <div class="recent-post other-author">
-                <div class="rounded-img">
-                  <img src="{% static 'assets/images/post.png' %}" alt="" />
-                </div>
-                <div class="recent-content">
-                  <h3>
-                    A blog title and other stuffs will add here, also we can
-                    incluse.
-                  </h3>
-                  <a class="learn" href="#"
-                    >Learn more
-                    <span class="material-icons"> trending_flat </span></a
-                  >
-                </div>
-              </div>
-              <div class="recent-post other-author">
-                <div class="rounded-img">
-                  <img src="{% static 'assets/images/post.png' %}" alt="" />
-                </div>
-                <div class="recent-content">
-                  <h3>
-                    A blog title and other stuffs will add here, also we can
-                    incluse.
-                  </h3>
-                  <a class="learn" href="#"
-                    >Learn more
-                    <span class="material-icons"> trending_flat </span></a
-                  >
-                </div>
-              </div>
+              {% endfor %}
             </div>
-
             <!-- top authors -->
+            
+
+            <!-- tags -->
             <div class="block">
-              <h2 class="title2">Other Authors</h2>
-              <div class="recent-post other-author">
-                <div class="rounded-img">
-                  <img src="{% static 'assets/images/post.png' %}" alt="" />
-                </div>
-                <div class="recent-content">
-                  <h3>
-                    A blog title and other stuffs will add here, also we can
-                    incluse.
-                  </h3>
-                  <a class="learn" href="#"
-                    >Learn more
-                    <span class="material-icons"> trending_flat </span></a
-                  >
-                </div>
-              </div>
-              <div class="recent-post other-author">
-                <div class="rounded-img">
-                  <img src="{% static 'assets/images/post.png' %}" alt="" />
-                </div>
-                <div class="recent-content">
-                  <h3>
-                    A blog title and other stuffs will add here, also we can
-                    incluse.
-                  </h3>
-                  <a class="learn" href="#"
-                    >Learn more
-                    <span class="material-icons"> trending_flat </span></a
-                  >
-                </div>
-              </div>
-              <div class="recent-post other-author">
-                <div class="rounded-img">
-                  <img src="{% static 'assets/images/post.png' %}" alt="" />
-                </div>
-                <div class="recent-content">
-                  <h3>
-                    A blog title and other stuffs will add here, also we can
-                    incluse.
-                  </h3>
-                  <a class="learn" href="#"
-                    >Learn more
-                    <span class="material-icons"> trending_flat </span></a
-                  >
-                </div>
+              <h2 class="title2">Top Tags</h2>
+              <div class="blog-tags">
+                {% for tag in tags %}
+                <div class="tag">{{tag.name|capfirst}}</div>
+                {% endfor %}
               </div>
             </div>
+            <!-- tags -->
 
           </div>
           <!-- right layout end -->
