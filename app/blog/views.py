@@ -6,9 +6,8 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 
 # Import from locals
-from app.blog.models import Post, Tag 
+from app.blog.models import Post, Tag, Comment, Profile 
 from app.blog.forms import CommentForm
-from app.blog.models import Comment
 from app.blog.forms import SubscribeForm
 
 # VIEWS: home_page
@@ -133,4 +132,9 @@ def tag_page(request, slug):
 
 # VIEWS: author_page
 def author_page(request, slug):
-    return render(request, 'app/blog/author.html')
+    profile = Profile.objects.get(slug=slug)
+    # print(profile)
+    context = {
+        'profile':profile,
+    }
+    return render(request, 'app/blog/author.html', context)

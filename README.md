@@ -905,3 +905,22 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         modified:   README.md
         modified:   templates/app/blog/author.html
+
+#### 14.7 Building author page - Part 3: Rendering user and bio based on Profile model
+
+        modified:   README.md
+
+        1. Use and get user
+        modified:   app/blog/views.py
+        profile = Profile.objects.get(slug=slug)
+
+        2. Render user and bio
+        modified:   templates/app/blog/author.html
+        {{profile.user|capfirst}}
+        {{profile.bio|capfirst}}
+
+        3. Testing
+        url/path/slug
+        http://127.0.0.1:8000/author/admin
+
+        4. Result :)
