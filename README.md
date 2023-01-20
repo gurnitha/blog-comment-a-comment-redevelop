@@ -930,3 +930,8 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         modified:   README.md
         modified:   app/blog/views.py
         modified:   templates/app/blog/author.html
+
+#### 14.9 Building author page - Part 5: Rendering 3 most recent osts by a spesific author
+
+        modified:   app/blog/views.py
+        modified:   templates/app/blog/author.html
