@@ -878,3 +878,25 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         var instance + author field in Post model + Profile model + profile_image + url
 
         <img src="{{top_post.author.profile.profile_image.url}}" alt="" />
+
+#### 14.5 Building author page - Part 1: Create static page
+
+        modified:   README.md
+
+        1. Create path
+        modified:   app/blog/urls.py
+        path('author/<slug:slug>',views.author_page,name='author_page'),
+
+        2. Create author_page view
+        modified:   app/blog/views.py
+        # VIEWS: author_page
+        def author_page(request, slug):
+                return render(request, 'app/blog/author.html')
+
+        3. Create author page
+        new file:   templates/app/blog/author.html
+
+        4. Testing
+        http://127.0.0.1:8000/author/1
+
+        5. Result :)

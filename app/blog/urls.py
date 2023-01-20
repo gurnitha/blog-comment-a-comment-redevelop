@@ -11,5 +11,6 @@ app_name = 'blog'
 urlpatterns = [
     path('', views.home_page, name='home'),
     path('post/<slug:slug>/', views.detail_page, name='detail'),
-    path('tag/<slug:slug>',views.tag_page,name='tag_page')
+    path('tag/<slug:slug>',views.tag_page,name='tag_page'),
+    path('author/<slug:slug>',views.author_page,name='author_page'),
 ]

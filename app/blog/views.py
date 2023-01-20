@@ -129,3 +129,8 @@ def tag_page(request, slug):
     }
     
     return render(request, 'app/blog/tag.html', context)
+
+
+# VIEWS: author_page
+def author_page(request, slug):
+    return render(request, 'app/blog/author.html')
