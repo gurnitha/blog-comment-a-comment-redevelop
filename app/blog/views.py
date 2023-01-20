@@ -4,6 +4,8 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+from django.contrib.auth.models import User
+from django.db.models import Count
 
 # Import from locals
 from app.blog.models import Post, Tag, Comment, Profile 
@@ -130,27 +132,48 @@ def tag_page(request, slug):
     return render(request, 'app/blog/tag.html', context)
 
 
-# VIEWS: author_page
+# # VIEWS: author_page
+# def author_page(request, slug):
+
+#     profile = Profile.objects.get(slug=slug)
+#     # print(profile)
+
+#     # Get 2 most viewed post by a spesific author
+#     # top_posts = Post.objects.filter(author__in=[profile.id]).order_by('-view_count')[0:2]
+#     top_posts = Post.objects.filter(author = profile.user).order_by('-view_count')[0:2]
+
+#     # print(top_posts)
+
+#     # Get 3 most recent posts by a spesific author
+#     recent_posts = Post.objects.filter(author__in=[profile.id]).order_by('-last_updated')[0:3]
+#     # print(recent_posts)
+
+#     # Get 3 most featured posts by a spesific author
+#     feature_posts = Post.objects.filter(author__in=[profile.id], is_featured=True).order_by('-last_updated')[0:3]
+#     # print(recent_posts)
+
+
+#     context = {
+#         'profile':profile,
+#         'top_posts':top_posts,
+#         'recent_posts':recent_posts,
+#         'feature_posts':feature_posts,
+#     }
+#     return render(request, 'app/blog/author.html', context)
+
+# # VIEWS: author_page >> using the author's codes
 def author_page(request, slug):
+
     profile = Profile.objects.get(slug=slug)
-    # print(profile)
 
-    # Get 2 most viewed post by a spesific author
-    top_posts = Post.objects.filter(author__in=[profile.id]).order_by('-view_count')[0:2]
-    # print(top_posts)
+    top_posts = Post.objects.filter(author = profile.user).order_by('-view_count')[0:2]
+    recent_posts = Post.objects.filter(author = profile.user).order_by('-last_updated')[0:2]
+    top_authors = User.objects.annotate(number=Count('post')).order_by('number') 
 
-    # Get 3 most recent posts by a spesific author
-    recent_posts = Post.objects.filter(author__in=[profile.id]).order_by('-last_updated')[0:3]
-    # print(recent_posts)
-
-    # Get 3 most featured posts by a spesific author
-    feature_posts = Post.objects.filter(author__in=[profile.id], is_featured=True).order_by('-last_updated')[0:3]
-    # print(recent_posts)
-
-    context = {
+    context={
         'profile':profile,
-        'top_posts':top_posts,
-        'recent_posts':recent_posts,
-        'feature_posts':feature_posts,
-    }
-    return render(request, 'app/blog/author.html', context)
+        'top_posts':top_posts, 
+        'recent_posts':recent_posts, 
+        'top_authors':top_authors}
+
+    return render(request, 'app/blog/tag.html', context)

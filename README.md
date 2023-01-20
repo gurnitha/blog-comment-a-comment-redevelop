@@ -941,3 +941,19 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         modified:   README.md
         modified:   app/blog/views.py
         modified:   templates/app/blog/author.html
+
+#### 14.11 Building author page - Part 7: Using the sourcecodes for the author_page view
+
+        modified:   README.md
+
+        1. Change the codes
+        modified:   app/blog/views.py
+        modified:   templates/app/blog/author.html
+        new file:   upload/images/darling.PNG
+        new file:   upload/images/darling_oMZdrV9.PNG
+        new file:   upload/images/post-2.png
+
+        NOTE: 
+
+        1. It worked in the author.html
+        2. Next to render the top authors 
