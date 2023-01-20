@@ -900,3 +900,8 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         http://127.0.0.1:8000/author/1
 
         5. Result :)
+
+#### 14.6 Building author page - Part 2: Adding htmal template
+
+        modified:   README.md
+        modified:   templates/app/blog/author.html
