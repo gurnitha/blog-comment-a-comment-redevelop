@@ -209,7 +209,7 @@ def author_page(request, slug):
     
     # Showing top author
     top_authors = User.objects.annotate(number=Count('post')).order_by('-number') 
-    
+
 
 
     context = {

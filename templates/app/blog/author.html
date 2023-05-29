@@ -44,7 +44,7 @@
                  {% if top_posts %}
                  {% for top_post in top_posts %}
                   <!-- card -->
-                  <a href="#">
+                  <a href="{% url 'blog:detail' top_post.slug %}">
                     <div class="card">
                       <div class="post-img">
                         <img src="{{top_post.image.url}}" alt="" />
@@ -85,7 +85,7 @@
                   {% if recent_posts %}
                   {% for recent_post in recent_posts %}
                   <!-- card -->
-                  <a href="#">
+                  <a href="{% url 'blog:detail' recent_post.slug %}">
                     <div class="card">
                       <div class="post-img">
                         <img src="{{recent_post.image.url}}" alt="" />

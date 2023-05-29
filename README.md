@@ -988,3 +988,11 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         Link the posts to detail page with slug flag.
 
+#### 14.12 Building author page - Part 10: Link the posts to detail page with slug flag
+
+        modified:   app/blog/views.py
+        modified:   templates/app/blog/author.html
+
+        NOTE:
+
+        Successfully display detail page for Top Posts and Trendy :)
