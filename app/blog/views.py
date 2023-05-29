@@ -161,23 +161,63 @@ def tag_page(request, slug):
 #     }
 #     return render(request, 'app/blog/author.html', context)
 
-# # VIEWS: author_page >> using the author's codes
+# # # VIEWS: author_page >> using the author's codes
+# def author_page(request, slug):
+
+#     profile = Profile.objects.get(slug=slug)
+
+#     top_posts = Post.objects.filter(author = profile.user).order_by('-view_count')[0:2]
+#     recent_posts = Post.objects.filter(author = profile.user).order_by('-last_updated')[0:3]
+#     top_authors = User.objects.annotate(number=Count('post')).order_by('-number') 
+
+#     tags = Tag.objects.all()
+
+#     context={
+#         'profile':profile,
+#         'top_posts':top_posts, 
+#         'recent_posts':recent_posts, 
+#         'top_authors':top_authors,
+#         'tags':tags,
+#     }
+
+#     return render(request, 'app/blog/author.html', context)
+
+# VIEWS: author_page
 def author_page(request, slug):
 
+    # Get single tag instance
+    # tag = Tag.objects.get(slug=slug)
+    
     profile = Profile.objects.get(slug=slug)
+    # print(profile)
 
+    # Get 2 most viewed post by a spesific author
+    # top_posts = Post.objects.filter(author__in=[profile.id]).order_by('-view_count')[0:2]
+    # top_posts = Post.objects.filter(tags__in=[tag.id], author = profile.user).order_by('-view_count')[0:2]
     top_posts = Post.objects.filter(author = profile.user).order_by('-view_count')[0:2]
-    recent_posts = Post.objects.filter(author = profile.user).order_by('-last_updated')[0:3]
+
+    # print(top_posts)
+
+    # Get 3 most recent posts by a spesific author
+    # recent_posts = Post.objects.filter(tags__in=[tag.id], author__in=[profile.id]).order_by('-last_updated')[0:3]
+    recent_posts = Post.objects.filter(author__in=[profile.id]).order_by('-last_updated')[0:3]
+    # print(recent_posts)
+
+    # Get 3 most featured posts by a spesific author
+    # feature_posts = Post.objects.filter(tags__in=[tag.id], author__in=[profile.id], is_featured=True).order_by('-last_updated')[0:3]
+    # print(recent_posts)
+    
+    # Showing top author
     top_authors = User.objects.annotate(number=Count('post')).order_by('-number') 
+    
 
-    tags = Tag.objects.all()
 
-    context={
-        'profile':profile,
-        'top_posts':top_posts, 
-        'recent_posts':recent_posts, 
+    context = {
+        # 'profile':profile,
+        'top_posts':top_posts,
+        'recent_posts':recent_posts,
+        # 'feature_posts':feature_posts,
+        # 'tag':tag,
         'top_authors':top_authors,
-        'tags':tags,
     }
-
     return render(request, 'app/blog/author.html', context)

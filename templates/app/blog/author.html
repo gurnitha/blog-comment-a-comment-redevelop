@@ -189,7 +189,7 @@
                   <h3>
                     {{top_author.first_name|capfirst}}
                   </h3>
-                  <a class="learn" href="#"
+                  <a class="learn" href="{% url 'blog:author_page' top_author.profile.slug %}"
                     >Learn more
                     <span class="material-icons"> trending_flat </span></a
                   >

@@ -968,3 +968,23 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         2. Render it to author page
         modified:   templates/app/blog/author.html
+
+#### 14.12 Building author page - Part 9 (2): Showing the top authors
+
+        modified:   README.md
+        new file:   app/blog/migrations/0007_profile_tags.py
+        modified:   app/blog/models.py
+        modified:   app/blog/views.py
+        modified:   templates/app/blog/author.html
+
+        NOTE:
+
+        1. Working file is: 14.2 - Part 9(2)
+        2. I shows top author and its posts
+
+        3. But the posts are not linking to show detail page.
+
+        NEXT:
+
+        Link the posts to detail page with slug flag.
+

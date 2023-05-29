@@ -12,6 +12,7 @@ class Profile(models.Model):
     profile_image = models.ImageField(null=True, blank=True, upload_to="images/")
     slug = models.SlugField(max_length=200, unique=True)
     bio = models.CharField(max_length=200)
+    tags = models.ManyToManyField('Tag', blank=True, null=True, related_name='profile_tags')
 
     def save(self, *args, **kwargs):
         if not self.id:
