@@ -28,7 +28,7 @@
             <!-- user and bio -->
             <center>
               <div class="typo">
-                <h1 class="title">{{profile.user|capfirst}}</h1>
+                <h1 class="title">{{profile.user.first_name|capfirst}}</h1>
                 <p>
                   {{profile.bio|truncatechars:50}}
                 </p>
@@ -131,7 +131,7 @@
                   {% if feature_posts %}
                   {% for feature_post in feature_posts %}	
                   <!-- card -->
-                  <a href="#">
+                  <a href="{% url 'blog:detail' feature_post.slug %}">
                     <div class="card">
                       <div class="post-img">
                         <img src="{{feature_post.image.url}}" alt="" />

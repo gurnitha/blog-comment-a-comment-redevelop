@@ -192,9 +192,9 @@ def author_page(request, slug):
     # print(profile)
 
     # Get 2 most viewed post by a spesific author
-    # top_posts = Post.objects.filter(author__in=[profile.id]).order_by('-view_count')[0:2]
+    top_posts = Post.objects.filter(author__in=[profile.id]).order_by('-view_count')[0:2]
     # top_posts = Post.objects.filter(tags__in=[tag.id], author = profile.user).order_by('-view_count')[0:2]
-    top_posts = Post.objects.filter(author = profile.user).order_by('-view_count')[0:2]
+    # top_posts = Post.objects.filter(author = profile.user).order_by('-view_count')[0:2]
 
     # print(top_posts)
 
@@ -205,6 +205,7 @@ def author_page(request, slug):
 
     # Get 3 most featured posts by a spesific author
     # feature_posts = Post.objects.filter(tags__in=[tag.id], author__in=[profile.id], is_featured=True).order_by('-last_updated')[0:3]
+    feature_posts = Post.objects.filter(author__in=[profile.id], is_featured=True).order_by('-last_updated')[0:3]
     # print(recent_posts)
     
     # Showing top author
@@ -213,11 +214,13 @@ def author_page(request, slug):
 
 
     context = {
-        # 'profile':profile,
+        'profile':profile,
         'top_posts':top_posts,
         'recent_posts':recent_posts,
-        # 'feature_posts':feature_posts,
+        'feature_posts':feature_posts,
         # 'tag':tag,
         'top_authors':top_authors,
     }
     return render(request, 'app/blog/author.html', context)
+
+

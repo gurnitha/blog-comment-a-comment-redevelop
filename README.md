@@ -969,7 +969,7 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         2. Render it to author page
         modified:   templates/app/blog/author.html
 
-#### 14.12 Building author page - Part 9 (2): Showing the top authors
+#### 14.13 Building author page - Part 9 (2): Showing the top authors
 
         modified:   README.md
         new file:   app/blog/migrations/0007_profile_tags.py
@@ -988,7 +988,7 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
 
         Link the posts to detail page with slug flag.
 
-#### 14.12 Building author page - Part 10: Link the posts to detail page with slug flag
+#### 14.14 Building author page - Part 10: Link the posts to detail page with slug flag
 
         modified:   app/blog/views.py
         modified:   templates/app/blog/author.html
@@ -996,3 +996,17 @@ My Learning link: https://www.udemy.com/course/python-django-masterclass/learn/l
         NOTE:
 
         Successfully display detail page for Top Posts and Trendy :)
+
+
+#### 14.15 Building author page - Part 11: Showing feature posts, author name and bio 
+
+        modified:   README.md
+        modified:   app/blog/views.py
+        modified:   templates/app/blog/author.html
+
+        NOTE:
+
+        1. Successfully display:
+
+           1.1 Author name and bio 
+           1.2 Feature posts by author
